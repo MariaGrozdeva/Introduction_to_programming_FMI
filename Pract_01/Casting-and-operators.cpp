@@ -4,7 +4,7 @@ using namespace std;
 int main() 
 {
 	// explicit casting - WITHOUT losing information
-	int  int_value = 32;
+	int  int_value  = 32;
 	char char_value = 'e';
 	cout << int   (int_value + char_value) << endl; // output: 133
 	cout << float (int_value + char_value) << endl; // output: 133
