@@ -17,7 +17,7 @@ int main()
 	cout << char_value2 << endl; // output: 6
 
 	double double_value = 67.344;
-	int int_value3 = double_value;
+	int    int_value3   = double_value;
 	cout << int_value3 << endl;         // output: 67
 	cout << (int_value3 + 's') << endl; // output: 182
 
@@ -31,7 +31,7 @@ int main()
 
 	char ch1 = '7';
 	char ch2 = 'y';
-	int i = 22;
+	int  i   = 22;
 
 	bool b1 = i >= ch1;
 	cout << b1 << endl;               // output: 0
