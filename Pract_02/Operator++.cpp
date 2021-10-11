@@ -3,6 +3,9 @@ using namespace std;
 
 int main() 
 {
+	// !! The prefix operator ++ increments the value of a variable and RETURNS THE VARIABLE (which is incremented). !!
+	// !! The suffix operator ++ increments the value of a variable and RETURNS THE VARIABLE'S OLD VALUE. !!
+	
 	int a = 10;
 	(++a) += 5;
 	cout << a << endl; // a = 16
