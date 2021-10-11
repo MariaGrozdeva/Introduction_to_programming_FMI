@@ -42,7 +42,7 @@
 | ! (логическо отрицание) |  
 
 |x  |y  | !x| x && y| x \|\| y|  
-|--|--|--|--|--|--|  
+|--|--|--|--|--|  
 | true | true  |false|true|true|  
 | true | false |false|false|true|  
 | false| true  |true|false|true|  
