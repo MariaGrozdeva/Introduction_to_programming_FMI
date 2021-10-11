@@ -8,7 +8,7 @@ int main()
 	cout << a << endl; // a = 16
 
 	int b = 10;
-	// (b++) += 5; // ERROR! b++ returns 10 and the expression "10 += 5" is NOT valid!
+	// (b++) += 5; // ERROR! b++ returns 10 and the expression "10 += 5" is NOT valid (left operand must be lvalue)!
 	cout << b << endl; 
 
 	int c = 10;
