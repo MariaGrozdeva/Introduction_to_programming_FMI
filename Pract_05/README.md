@@ -5,7 +5,7 @@
 ![alt_text](https://i.ibb.co/5RQXWT2/Circles.jpg)
 
 **б)**  
-![alt_text](https://i.ibb.co/vcbWMvW/Square-circle.jpg)
+![alt_text](https://i.ibb.co/f11KYTm/Square-circle.jpg)
 
 **в)**  
 ![alt_text](https://i.ibb.co/XCZ0Fg7/Curvy-house.jpg)
