@@ -8,14 +8,14 @@ int main()
 
 	bool isInside = false;
 
-	if (y >= -3 && y <= 2 && x >= -3 && x <= 3)
+	if (y >= -3 && y <= 1 && x >= -3 && x <= 3)
 	{
 		isInside = true;
 	}
 	else if (y >= 2)
 	{
 		int radius = 3;
-		int distSquared = x * x + (y - 2) * (y - 2);
+		int distSquared = x * x + (y - 1) * (y - 1);
 		if (distSquared <= radius * radius)
 			isInside = true;
 	}
