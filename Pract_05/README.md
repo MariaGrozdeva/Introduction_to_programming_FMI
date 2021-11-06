@@ -2,13 +2,13 @@
 
 **Задача 1:** Напишете програма, която приема две цели числа - координатите на двумерна точка, и проверява дали точката лежи в съответната фигура:  
 **а)**  
-![alt_text](https://i.ibb.co/5RQXWT2/Circles.jpg)
+![alt_text](https://i.ibb.co/m6XtBDK/Circles.png)
 
 **б)**  
-![alt_text](https://i.ibb.co/f11KYTm/Square-circle.jpg)
+![alt_text](https://i.ibb.co/PM8Z7ZR/Square-circle.jpg)
 
 **в)**  
-![alt_text](https://i.ibb.co/XCZ0Fg7/Curvy-house.jpg)
+![alt_text](https://i.ibb.co/0Y28NvF/Curvy-house.png)
 
 **Задача 2:** Да се напише програма, която приема естествено число n и отпечатва следната гира:  
 
