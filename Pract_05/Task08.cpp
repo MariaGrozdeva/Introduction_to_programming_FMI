@@ -1,41 +1,52 @@
 #include <iostream>
-using namespace std;
 
 int main()
 {
-	int n, k;
-	cin >> n >> k;
+	int num = 0;
+	int k = 0;
 
-	int originalN = n;
+	std::cin >> num;
+
+	do
+	{
+		std::cin >> k;
+
+		if (k == 0)
+			std::cout << "Please enter a number greater than zero!\n";
+	} while (k == 0);
+
+	bool isInfix = true;
+	bool hasChanged = false;
 	int originalK = k;
-
-	bool changed = false;
 
 	while (k > 0)
 	{
-		if (n == 0 && k > 0)
+		if (num == 0 && k > 0)
 		{
-			cout << "k is NOT infix of n";
-			return 0;
+			isInfix = false;
+			break;
 		}
 
-		if (n % 10 == k % 10)
+		int reminder = k % 10;
+		if (num % 10 == reminder)
 		{
-			n /= 10;
 			k /= 10;
-			changed = true;
+			num /= 10;
+			hasChanged = true;
 			continue;
 		}
 
-		if (changed && (n % 10 != k % 10))
+		if (hasChanged && !(num % 10 == reminder))
 		{
 			k = originalK;
-			changed = false;
+			hasChanged = false;
 			continue;
 		}
 
-		n /= 10;
+		num /= 10;
 	}
 
-	cout << "k is infix of n";
+	std::cout << (isInfix ? "yes" : "no"); 
+
+	return 0;
 }
