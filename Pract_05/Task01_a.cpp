@@ -17,16 +17,15 @@ int main()
 	}
 	else if (y >= -3)
 	{
-			int radiusRight = 3;
-			int distSquaredRight = (x - 5) * (x - 5) + y * y;
-			if (distSquaredRight <= radiusRight * radiusRight)
-				isInside = true;
+		int radius = 3;
 		
-			int radiusLeft = 3;
-			int distSquaredLeft = (x + 5) * (x + 5) + y * y;
-			if (distSquaredLeft <= radiusLeft * radiusLeft)
-				isInside = true;
-			
+		int distSquaredRight = (x - 5) * (x - 5) + y * y;
+		if (distSquaredRight <= radius * radius)
+			isInside = true;
+		
+		int distSquaredLeft = (x + 5) * (x + 5) + y * y;
+		if (distSquaredLeft <= radius * radius)
+			isInside = true;	
 	}
 
 	if (isInside)
