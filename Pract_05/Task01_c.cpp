@@ -12,7 +12,7 @@ int main()
 	{
 		isInside = true;
 	}
-	else if (y >= 2)
+	else if (y >= 1)
 	{
 		int radius = 3;
 		int distSquared = x * x + (y - 1) * (y - 1);
