@@ -90,7 +90,7 @@ void getBullsAndCows(int toGuess, int myGuess, int& bulls, int& cows)
 
 int main()
 {
-	cout << "Enter number to be guessed:" << endl;
+	cout << "Enter a number to be guessed:" << endl;
 	int toGuess;
 	input(toGuess);
 
