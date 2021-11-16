@@ -1,5 +1,3 @@
-// week 7.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 using namespace std;
@@ -60,4 +58,3 @@ int main()
 }
 
 // (index[1] >= index[0] && index[1] >= index[2]) || (index[1] <= index[0] && index[1] <= index[2]
-//
