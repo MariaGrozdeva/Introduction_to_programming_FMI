@@ -2,8 +2,7 @@
 
 int main()
 {
-	int num = 0;
-	int k = 0;
+	int num, k;
 
 	std::cin >> num;
 
