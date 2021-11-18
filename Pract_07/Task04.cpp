@@ -31,7 +31,7 @@ int main()
 	int arr[] = { 1,5,1,0,3 };
 	int len = sizeof(arr) / sizeof(int);
 
-	convertInTriton(arr, len);
+	convertToTrion(arr, len);
 
 	return 0;
 }
