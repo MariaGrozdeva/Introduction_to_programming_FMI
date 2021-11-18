@@ -11,7 +11,7 @@ bool containsNumber(const int arr[], int size, int num)
 	return false;
 }
 
-bool areSequencesOfSameSet(int arr1[], int size1, int arr2[], int size2)
+bool areSequencesOfSameSet(const int arr1[], int size1, const int arr2[], int size2)
 {
 	for (int i = 0; i < size1; i++)
 	{
