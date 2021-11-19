@@ -10,7 +10,7 @@ void input(int& n)
 	
 	while (n < 0 || n > MAX_SIZE)
 	{
-		cout << "Wrong input! Try again: ";
+		cout << "Invalid input! Try again: ";
 		cin >> n;
 	}
 }
