@@ -1,15 +1,17 @@
 #include <iostream>
+using namespace std;
 
 const int MAX_SIZE = 1000;
 
 void input(int& n)
 {	
-	std::cout << "Input number: ";
-	std::cin >> n;
+	cout << "Input number: ";
+	cin >> n;
+	
 	while (n < 0 || n > MAX_SIZE)
 	{
-		std::cout << "Wrong input! Try again: ";
-		std::cin >> n;
+		cout << "Wrong input! Try again: ";
+		cin >> n;
 	}
 }
 
@@ -30,9 +32,9 @@ void eratosthenes(bool arr[], int size)
 	for (int i = 2; i <= size; i++)
 	{
 		if (arr[i])
-			std::cout << i << ' ';
+			cout << i << ' ';
 	}
-	std::cout << '\n';
+	cout << endl;
 }
 
 int main()
