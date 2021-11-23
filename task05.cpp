@@ -1,19 +1,23 @@
-
 #include <iostream>
 using namespace std;
 
-void returnNumber(const char arr[])
+void returnBigLetters(const char arr[])
 {
     int len = strlen(arr);
-    
     for (int i = 0; i < len; i++)
-    {
-        
-
-        if (arr[i] >= '0' && arr[i] <= '9')
+    {  
+        if (arr[i] >= 'à' && arr[i] <= 'z')
+        {
+            
+            char c = arr[i];
+            c -= 32;
+            cout << c;
+        }
+        else
             cout << arr[i];
     }
 }
+
 int main()
 {
     const int maxSize = 64;
@@ -21,5 +25,5 @@ int main()
 
     cin.getline(arr, maxSize);
 
-    returnNumber(arr);
+    returnBigLetters(arr);
 }
