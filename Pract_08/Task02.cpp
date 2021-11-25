@@ -8,6 +8,7 @@ void Strcat(char lhs[], const char rhs[])
 
 	for (size_t i = 0; i < lenRhs; i++)
 		lhs[lenLhs + i] = rhs[i];
+	lhs[lenLhs + lenRhs] = '\0'
 }
 
 int main()
