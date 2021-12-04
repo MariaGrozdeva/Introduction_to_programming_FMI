@@ -81,7 +81,7 @@ bool isWinner(const char table[tableSize][tableSize], int k, char mark)
 				return true;
 		}
 	}
-	
+
 	// k consecutive marks in any diagonal above and below the principal one
 	for (int i = 0; i < tableSize; i++)
 	{
@@ -113,7 +113,7 @@ bool isWinner(const char table[tableSize][tableSize], int k, char mark)
 	for (int i = 0; i < tableSize; i++)
 	{
 		int count = 0;
-		for (int rowInd = 0, colInd = i ; colInd >= 0; rowInd++, colInd--)
+		for (int rowInd = 0, colInd = i; colInd >= 0; rowInd++, colInd--)
 		{
 			if (table[rowInd][colInd] == mark)
 				count++;
@@ -147,33 +147,28 @@ bool isWinner(const char table[tableSize][tableSize], int k, char mark)
 int main()
 {
 	char table[tableSize][tableSize];
-	int k; // The player who succeeds in placing k of their marks in a horizontal, vertical, or diagonal row is the winner.
-
 	init(table);
+
 	cout << "Enter the number of consecutive marks which should be placed: ";
+	int k; // The player who succeeds in placing k of their marks in a horizontal, vertical, or diagonal row is the winner.
 	inputK(k);
-
 	print(table);
-	bool isFirstPlayersTurn = true;
 
-	while (true)
+	bool isFirstPlayersTurn = true;
+	int x, y; // coordinates of a cell
+
+	do
 	{
 		cout << "It's " << (isFirstPlayersTurn ? "first" : "second") << " player's turn!" << endl;
-
-		int x, y;
 		cout << "Enter a cell with its coordinates: ";
 		inputCoordinates(table, x, y);
 
-		system("CLS");
+		system("CLS"); // clears everything which is currently on the console
 		table[x][y] = isFirstPlayersTurn ? 'x' : 'o';
 		print(table);
 
-		if (isWinner(table, k, table[x][y]))
-		{
-			cout << "You won!";
-			break;
-		}
-
 		isFirstPlayersTurn = !isFirstPlayersTurn;
-	}
+	} while (!isWinner(table, k, table[x][y]));
+
+	cout << "You won!";
 }
