@@ -1,3 +1,20 @@
+## Референции и указатели
+```c++
+int a = 5;
+int b = 10;
+
+// 1
+int* ptr = &a;
+// 2
+int& ref = a;
+// 3
+ptr = &b;
+// 4
+ref = b;
+```
+
+![alt_text](https://i.ibb.co/CMZrx7V/Demo.png)
+
 ## Задачи
 ### Задачите да се решават чрез указателна аритметика :heavy_exclamation_mark:
 
