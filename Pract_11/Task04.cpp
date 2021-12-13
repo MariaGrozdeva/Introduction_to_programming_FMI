@@ -51,7 +51,7 @@ int main()
 {
 	const int maxSize = 256;
 
-	char* str = new char[maxSize + 1];
+	char str[maxSize + 1];
 	cin.getline(str, maxSize);
 
 	char* X;
@@ -60,7 +60,6 @@ int main()
 	cout << X << endl;
 	cout << Y << endl;
 
-	delete[] str;
 	delete[] X;
 	delete[] Y;
 }

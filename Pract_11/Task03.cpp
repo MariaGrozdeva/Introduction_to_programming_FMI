@@ -35,15 +35,14 @@ void removeDigits(const char* str, char*& result)
 
 int main()
 {
-	const int maxSize = 256;
+	const int maxSize = 128;
 
-	char* str = new char[maxSize + 1];
+	char str[maxSize + 1];
 	cin.getline(str, maxSize);
 
 	char* result;
 	removeDigits(str, result);
 	cout << result;
 
-	delete[] str;
 	delete[] result;
 }
