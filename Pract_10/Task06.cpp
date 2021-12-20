@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 int strLen(const char* str)
 {
@@ -27,6 +28,7 @@ void RLE(char* str)
 {
 	const int minRepeatedLetters = 4;
 	const int numbersOfStringToBeReplaced = 4; // E.g. (5d) has 4 symbols
+	
 	int len = strLen(str);
 	int cnt = 0;
 	int endIdx = 0;
@@ -36,9 +38,9 @@ void RLE(char* str)
 		cnt = 1;
 		while (i < len - 1 && str[i] == str[i + 1])
 		{
-				i++;
-				cnt++;
-				endIdx++;
+			i++;
+			cnt++;
+			endIdx++;
 		}
 		
 		if (cnt >= minRepeatedLetters)
@@ -54,7 +56,9 @@ void RLE(char* str)
 			{
 				int removeUselessLetters = cnt - minRepeatedLetters;
 				int removeFrom = i - cnt + numbersOfStringToBeReplaced + 1;
+				
 				removeSomeElements(str, removeFrom, removeUselessLetters);
+				
 				i--;
 				len--;
 			}
@@ -66,7 +70,5 @@ int main()
 {
 	char str[] = "abcdddddaaaaaaabccdddzzzz";
 	RLE(str);
-	std::cout << str;
-
-	return 0;
+	cout << str;
 }
