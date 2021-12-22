@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 int strLen(const char* str)
 {
@@ -17,8 +18,8 @@ bool isDigit(char ch)
 int findNewLenOfTheString(const char* str)
 {
 	int len = strLen(str);
-	const int toRepaceLen = 5;
 	int newLen = 0;
+	const int toRepaceLen = 5;
 
 	for (int i = 0; i < len; i++)
 	{
@@ -42,13 +43,14 @@ void censor(char*& str)
 {
 	const char* toReplace = "_NUM_";
 	const int toRepaceLen = 5;
+	
 	int len = strLen(str);
 	int newLen = findNewLenOfTheString(str);
 	
 	char* newStr = new char[newLen + 1];
 	if (!newStr)
 	{
-		std::cerr << "Can't allocate memory!\n";
+		cerr << "Can't allocate memory!" << endl;
 		return;
 	}
 
@@ -56,7 +58,7 @@ void censor(char*& str)
 	{
 		int idx = 0; // Index of toReplace
 
-		// Move the index to the last position that has a digit + 1
+		// Move the index to the last position that has a digit, + 1
 		if (isDigit(str[i]))
 		{
 			while (isDigit(str[i]))
@@ -85,14 +87,14 @@ int main()
 	const int maxSize = 512;
 
 	char str[maxSize];
-	std::cin.getline(str, maxSize);
+	cin.getline(str, maxSize);
 
 	int len = strLen(str);
 
 	char* buffer = new char[len + 1];
 	if (!buffer)
 	{
-		std::cerr << "can't allocate memory!\n";
+		cerr << "can't allocate memory!" << endl;
 		return -1;
 	}
 
@@ -102,10 +104,7 @@ int main()
 	buffer[len] = '\0';
 
 	censor(buffer);
-	std::cout << buffer;
+	cout << buffer;
 
 	delete[] buffer;
-	
-
-	return 0;
 }
