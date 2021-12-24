@@ -1,8 +1,9 @@
 #include <iostream>
+using namespace std;
 
 const int maxDigitsNumber = 10;
 const char arrayOfDigits[][maxDigitsNumber] = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-const int digitsLen[maxDigitsNumber]        = {    4,     3,     3,       5,      4,      4,     3,       5,      5,       4   }; // Not the finest way, but 'enum' is not studied
+const int digitsLen[maxDigitsNumber] = { 4,     3,     3,       5,      4,      4,     3,       5,      5,       4 }; // Not the finest way, but 'enum' is not studied
 
 int strLen(const char* str)
 {
@@ -13,7 +14,7 @@ int strLen(const char* str)
 	return  len;
 }
 
-bool isDigit(const char symbol)
+bool isDigit(char symbol)
 {
 	return (symbol >= '0' && symbol <= '9');
 }
@@ -73,7 +74,7 @@ void digitsTransformInString(char*& str)
 	char* newStr = new char[newLen + 1];
 	if (!newStr)
 	{
-		std::cerr << "Can't allocate memory!\n";
+		cerr << "Can't allocate memory!" << endl;
 		return;
 	}
 
@@ -141,13 +142,14 @@ int main()
 {
 	const int maxSize = 512;
 	char str[maxSize];
-	std::cin.getline(str, maxSize);
+
+	cin.getline(str, maxSize);
 	int len = strLen(str);
 
 	char* buffer = new char[len + 1];
 	if (!buffer)
 	{
-		std::cerr << "Can't allocate memory!\n";
+		cerr << "Can't allocate memory!\n";
 		return -1;
 	}
 
@@ -157,9 +159,7 @@ int main()
 	buffer[len] = '\0';
 
 	digitsTransformInString(buffer);
-	std::cout << buffer;
+	cout << buffer;
 
 	delete[] buffer;
-
-	return 0;
 }
