@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstring>
 
 bool isCapital(char symbol)
 {
