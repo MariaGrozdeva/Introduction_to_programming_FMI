@@ -1,35 +1,31 @@
 #include <iostream>
 #include <cstring>
 
-int posOfTheNthMeet(const char* str, int size, int n, char symbol, int start, int cnt)
+int posOfTheNthMeet(const char* str, int size, char symbol, int n, int currentPos)
 {
-	if (start == size)
+	if (size == 0)
 		return -1;
-
-	if (str[start] == symbol)
-	{
-		cnt++;
-		if (cnt == n)
-			return start;
-		else
-			return posOfTheNthMeet(str, size, n, symbol, start + 1, cnt);
-	}
+	if (n == 0)
+		return currentPos - 1;
+	
+	if (*str == symbol)
+		return posOfTheNthMeet(str + 1, size - 1, symbol, n - 1, currentPos + 1);
 	else
-		return posOfTheNthMeet(str, size, n, symbol, start + 1, cnt);
+		return posOfTheNthMeet(str + 1, size - 1, symbol, n, currentPos + 1);
 }
-
-int posOfTheNthMeetWrapper(const char* str, int size, int n, char symbol)
+int posOfTheNthMeetWrapper(const char* str, int size, char symbol, int n)
 {
-	return posOfTheNthMeet(str, size, n, symbol, 0, 0);
+	return posOfTheNthMeet(str, size, symbol, n, 0);
 }
 
 int main()
 {
 	const char* str = "abcMdGREaama";
 	int len = strlen(str);
-	int n = 3;
 	char symbol = 'a';
-	std::cout << posOfTheNthMeetWrapper(str, len, n, symbol);
+	int n = 3;
+
+	std::cout << posOfTheNthMeetWrapper(str, len, symbol, n);
 
 	return 0;
 }
