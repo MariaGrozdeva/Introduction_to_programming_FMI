@@ -1,33 +1,18 @@
 #include <iostream>
-#include <cstring>
 
-bool isPalindrome(const char* str, int size, int start)
+bool isPalindrome(const char* str, int start, int size)
 {
-	int len = strlen(str);
+	if (str[start] != str[size - 1])
+		return false;
+	if (start >= size)
+		return true;
 
-	if (len % 2 == 0)
-	{
-		if (start == size)
-			return true;
-
-		if (str[start] != str[size - 1])
-			return false;
-	}
-	else
-	{
-		if (start == size - 1)
-			return true;
-
-		if (str[start] != str[size - 1])
-			return false;
-	}
-
-	isPalindrome(str, size - 1, start + 1);
+	return isPalindrome(str, start + 1, size - 1);
 }
 
 bool isPalindromeWrapper(const char* str, int size)
 {
-	return isPalindrome(str, size, 0);
+	return isPalindrome(str, 0, size);
 }
 
 int main()
