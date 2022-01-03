@@ -28,6 +28,5 @@ int main()
 	int len = strlen(str);
 	std::cout << "Index of the first capital letter is: " << idxOfFirstCapitalLetterWrapper(str, len);
 
-
 	return 0;
 }
