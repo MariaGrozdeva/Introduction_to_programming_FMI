@@ -5,15 +5,15 @@ bool isCapital(char symbol)
 	return symbol >= 'A' && symbol <= 'Z';
 }
 
-int idxOfFirstCapitalLetter(const char* str, int size, int start)
+int idxOfFirstCapitalLetter(const char* str, int size, int currentPos)
 {
-	if (start == size)
+	if (currentPos == size)
 		return -1;
 
-	if (isCapital(str[start]))
-		return start;
+	if (isCapital(str[currentPos]))
+		return currentPos;
 	else
-		return idxOfFirstCapitalLetter(str, size, start + 1);
+		return idxOfFirstCapitalLetter(str, size, currentPos + 1);
 }
 
 int idxOfFirstCapitalLetterWrapper(const char* str, int size)
