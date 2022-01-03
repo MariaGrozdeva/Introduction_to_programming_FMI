@@ -7,9 +7,8 @@ bool binarySearchRec(const int* arr, int size, int num, int lhs, int rhs)
         
     	int mid = lhs + (rhs - lhs) / 2;
 	if (arr[mid] == num)
-		return true;
-		
-	else if (arr[mid] > num)
+		return true;		
+	if (arr[mid] > num)
 		binarySearchRec(arr, size, num, lhs, mid - 1);
 	else
 		binarySearchRec(arr, size, num, mid + 1, rhs);
