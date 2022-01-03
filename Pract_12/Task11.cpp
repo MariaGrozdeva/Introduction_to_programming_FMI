@@ -12,6 +12,7 @@ int posOfTheNthMeet(const char* str, int size, char symbol, int n, int currentPo
 	else
 		return posOfTheNthMeet(str + 1, size - 1, symbol, n, currentPos + 1);
 }
+
 int posOfTheNthMeetWrapper(const char* str, int size, char symbol, int n)
 {
 	return posOfTheNthMeet(str, size, symbol, n, 0);
