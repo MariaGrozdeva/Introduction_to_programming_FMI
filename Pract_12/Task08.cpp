@@ -2,25 +2,24 @@
 
 bool binarySearchRec(const int* arr, int size, int num, int lhs, int rhs)
 {
-	if (lhs <= rhs)
-	{
-		int mid = lhs + (rhs - lhs) / 2;
-		if (arr[mid] == num)
-			return true;
-		else if (arr[mid] > num)
-			binarySearchRec(arr, size, num, lhs, mid - 1);
-		else if (arr[mid] < num)
-			binarySearchRec(arr, size, num, mid + 1, rhs);
-	}
+    if (lhs > rhs)
+        return false;
+        
+    int mid = lhs + (rhs - lhs) / 2;
+	if (arr[mid] == num)
+		return true;
+		
+	else if (arr[mid] > num)
+		binarySearchRec(arr, size, num, lhs, mid - 1);
 	else
-		return false;
+		binarySearchRec(arr, size, num, mid + 1, rhs);
 }
 
 bool binarySearchWrapper(const int* arr, int size, int num)
 {
 	int lhs = 0;
 	int rhs = size - 1;
-	int mid = lhs + (rhs - lhs) / 2;
+	
 	return binarySearchRec(arr, size, num, lhs, rhs);
 }
 
