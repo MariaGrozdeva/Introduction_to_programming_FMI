@@ -2,10 +2,10 @@
 
 bool binarySearchRec(const int* arr, int size, int num, int lhs, int rhs)
 {
-    if (lhs > rhs)
-        return false;
+    	if (lhs > rhs)
+       		return false;
         
-    int mid = lhs + (rhs - lhs) / 2;
+    	int mid = lhs + (rhs - lhs) / 2;
 	if (arr[mid] == num)
 		return true;
 		
