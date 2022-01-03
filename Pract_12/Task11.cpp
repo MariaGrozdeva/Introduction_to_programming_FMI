@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstring>
 
 int posOfTheNthMeet(const char* str, int size, char symbol, int n, int currentPos)
 {
@@ -20,7 +19,7 @@ int posOfTheNthMeetWrapper(const char* str, int size, char symbol, int n)
 
 int main()
 {
-	const char* str = "abcMdGREaama";
+	char str[] = "abcMdGREaama";
 	int len = strlen(str);
 	char symbol = 'a';
 	int n = 3;
