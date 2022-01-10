@@ -8,7 +8,7 @@ int toDigit(char ch)
 int Atoi(const char* str, int len)
 {
 	if (len == 1)
-		return *str - '0';
+		return toDigit(*str);
 
 	return Atoi(str, len - 1) * 10 + toDigit(str[len - 1]);
 }
