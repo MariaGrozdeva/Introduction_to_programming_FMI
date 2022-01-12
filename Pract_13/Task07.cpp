@@ -1,19 +1,19 @@
 #include <iostream>
+using namespace std;
 
 const int MAX = 32;
 
 void input(char*& word)
 {
 	char input[MAX];
-	std::cin >> input;
+	cin >> input;
 	
 	int len = strlen(input);
 	word = new char[len + 1];
 
 	strcpy_s(word, len + 1, input);
 }
-
-void freeWord(char*& word)
+void freeWord(char* word)
 {
 	delete[] word;
 }
@@ -21,23 +21,22 @@ void freeWord(char*& word)
 void input(char**& dictionary, int numberOfWords)
 {
 	dictionary = new char* [numberOfWords];
-	for (int i = 0; i < numberOfWords; i++)
+	for (size_t i = 0; i < numberOfWords; i++)
 	{
 		dictionary[i] = new char[MAX + 1];
-		std::cin >> dictionary[i];
+		cin >> dictionary[i];
 	}
 }
-
 void freeDictionary(char** dictionary, int numberOfWords)
 {
-	for (int i = 0; i < numberOfWords; i++)
+	for (size_t i = 0; i < numberOfWords; i++)
 		delete[] dictionary[i];
 	delete[] dictionary;
 }
 
 bool contains(char** const dictionary, int numberOfWords, const char* word)
 {
-	for (int i = 0; i < numberOfWords; i++)
+	for (size_t i = 0; i < numberOfWords; i++)
 	{
 		if (strcmp(dictionary[i], word) == 0)
 			return true;
@@ -48,20 +47,19 @@ bool contains(char** const dictionary, int numberOfWords, const char* word)
 int main()
 {
 	char* word;
-	std::cout << "Input the word to be found: ";
+	cout << "Input the word to be found: ";
 	input(word);
 	
 	int numberOfWords;
-	std::cout << "Input number of words in the dictionary: ";
-	std::cin >> numberOfWords;
+	cout << "Input number of words in the dictionary: ";
+	cin >> numberOfWords;
+	
 	char** dictionary;
-	std::cout << "Input the words in the dictionary: ";
+	cout << "Input the words in the dictionary: " << endl;
 	input(dictionary, numberOfWords);
 
-	std::cout << (contains(dictionary, numberOfWords, word) ? "Yes" : "No");
+	cout << contains(dictionary, numberOfWords, word) ? "Yes" : "No";
 
 	freeDictionary(dictionary, numberOfWords);
 	freeWord(word);
-
-	return 0;
 }
