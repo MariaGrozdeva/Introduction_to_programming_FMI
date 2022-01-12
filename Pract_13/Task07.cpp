@@ -1,39 +1,43 @@
 #include <iostream>
-using namespace std;
 
-const int maxSize = 32;
+const int MAX = 32;
 
-void input(char*& str) 
+void input(char*& word)
 {
-	char input[maxSize];
-	cin >> input;
-
+	char input[MAX];
+	std::cin >> input;
+	
 	int len = strlen(input);
-	str = new char[len + 1];
+	word = new char[len + 1];
 
-	strcpy_s(str, len + 1, input);
+	strcpy_s(word, len + 1, input);
 }
-void input(char**& dictionary, int n) 
-{
-	dictionary = new char* [n];
 
-	for (size_t i = 0; i < n; i++) 
+void freeWord(char*& word)
+{
+	delete[] word;
+}
+
+void input(char**& dictionary, int numberOfWords)
+{
+	dictionary = new char* [numberOfWords];
+	for (int i = 0; i < numberOfWords; i++)
 	{
-		dictionary[i] = new char[maxSize + 1];
-		input(dictionary[i]);
+		dictionary[i] = new char[MAX + 1];
+		std::cin >> dictionary[i];
 	}
 }
 
-void free(char** dictionary, int n) 
+void freeDictionary(char** dictionary, int numberOfWords)
 {
-	for (size_t i = 0; i < n; i++)
+	for (int i = 0; i < numberOfWords; i++)
 		delete[] dictionary[i];
 	delete[] dictionary;
 }
 
-bool contains(char** const dictionary, int n, const char* word) 
+bool contains(char** const dictionary, int numberOfWords, const char* word)
 {
-	for (size_t i = 0; i < n; i++) 
+	for (int i = 0; i < numberOfWords; i++)
 	{
 		if (strcmp(dictionary[i], word) == 0)
 			return true;
@@ -44,15 +48,20 @@ bool contains(char** const dictionary, int n, const char* word)
 int main()
 {
 	char* word;
+	std::cout << "Input the word to be found: ";
 	input(word);
-
-	int n;
-	cin >> n;
-
-	char** dictionary;
-	input(dictionary, n);
-
-	cout << contains(dictionary, n, word);
 	
-	free(dictionary, n);
+	int numberOfWords;
+	std::cout << "Input number of words in the dictionary: ";
+	std::cin >> numberOfWords;
+	char** dictionary;
+	std::cout << "Input the words in the dictionary: ";
+	input(dictionary, numberOfWords);
+
+	std::cout << (contains(dictionary, numberOfWords, word) ? "Yes" : "No");
+
+	freeDictionary(dictionary, numberOfWords);
+	freeWord(word);
+
+	return 0;
 }
