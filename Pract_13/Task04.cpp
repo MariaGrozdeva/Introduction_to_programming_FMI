@@ -1,10 +1,11 @@
 #include <iostream>
+using namespace std;
 
 void printCurrentArr(const int* currentArr, int len)
 {
 	for (int i = 0; i < len; i++)
-		std::cout << currentArr[i];
-	std::cout << ' ';
+		cout << currentArr[i];
+	cout << ' ';
 }
 
 void allNumbersWithNIncreasingDigits(int n, int* currentArr, int len, int pos, int start)
@@ -40,8 +41,6 @@ void allNumbersWithNIncreasingDigits(int n)
 int main()
 {
 	int n;
-	std::cin >> n;
+	cin >> n;
 	allNumbersWithNIncreasingDigits(n);
-
-	return 0;
 }
