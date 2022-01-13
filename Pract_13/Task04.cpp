@@ -7,7 +7,7 @@ void printCurrentArr(const int* currentArr, int len)
 	std::cout << ' ';
 }
 
-void allNumbersWithNDigits(int n, int* currentArr, int len, int pos, int start)
+void allNumbersWithNIncreasingDigits(int n, int* currentArr, int len, int pos, int start)
 {
 	if (!n)
 	{
@@ -20,19 +20,19 @@ void allNumbersWithNDigits(int n, int* currentArr, int len, int pos, int start)
 		currentArr[pos] = i;	
 		if (i - start + 1 > pos)
 		{
-			allNumbersWithNDigits(n - 1, currentArr, len, pos + 1, start);
+			allNumbersWithNIncreasingDigits(n - 1, currentArr, len, pos + 1, start);
 			start++;
 		}
 	}
 }
 
-void allNumbersWithNDigits(int n)
+void allNumbersWithNIncreasingDigits(int n)
 {
 	int len = n;
 	int* current = new int[len];
 	int pos = 0;
 	int start = 0;
-	allNumbersWithNDigits(n, current, len, pos, start);
+	allNumbersWithNIncreasingDigits(n, current, len, pos, start);
 
 	delete[] current;
 }
@@ -41,7 +41,7 @@ int main()
 {
 	int n;
 	std::cin >> n;
-	allNumbersWithNDigits(n);
+	allNumbersWithNIncreasingDigits(n);
 
 	return 0;
 }
