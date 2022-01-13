@@ -9,24 +9,34 @@ void input(char**& arrayOfStrings, int& numberOfStrings)
 {
 	cin >> numberOfStrings;
 	arrayOfStrings = new char* [numberOfStrings];
-	for (int i = 0; i < numberOfStrings; i++)
+	for (size_t i = 0; i < numberOfStrings; i++)
 	{
 		arrayOfStrings[i] = new char[MAX_WORD_SIZE];
 		cin >> arrayOfStrings[i];
 	}
 }
 
-void free(char** arrayOfStings, int numberOfStrings)
+void free(char** matrix, int rows)
 {
-	for (int i = 0; i < numberOfStrings; i++)
-		delete[] arrayOfStings[i];
-	delete[] arrayOfStings;
+	for (size_t i = 0; i < rows; i++)
+		delete[] matrix[i];
+	delete[] matrix;
+}
+
+void printMatrix(char** const arrayOfStrings, int rows, int cols)
+{
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+			cout << arrayOfStrings[i][j] << ' ';
+		cout << endl;
+	}
 }
 
 int meetLetter(char** const arrayOfStrings, int numberOfStrings, char ch)
 {
 	int cnt = 0;
-	for (int i = 0; i < numberOfStrings; i++)
+	for (size_t i = 0; i < numberOfStrings; i++)
 	{
 		int currentWordLen = strlen(arrayOfStrings[i]);
 		int idx = 0;
@@ -43,17 +53,17 @@ void numberOfLettersMeet(char** const arrayOfStrings, int numberOfStrings, int a
 {
 	int currentWordMeeting = 0;
 	char ch = 'a';
-	for (int i = 0; i < ALPHABET_SIZE && ch <= 'z'; i++, ch++)
+	for (size_t i = 0; i < ALPHABET_SIZE && ch <= 'z'; i++, ch++)
 	{
 		currentWordMeeting = meetLetter(arrayOfStrings, numberOfStrings, ch);
 		arrWithValues[i] = currentWordMeeting;
 	}
 }
 
-int newSizeOfColums(int arrayOfValues[ALPHABET_SIZE])
+int newSizeOfColums(const int arrayOfValues[ALPHABET_SIZE])
 {
 	int cnt = 0;
-	for (int i = 0; i < ALPHABET_SIZE; i++)
+	for (size_t i = 0; i < ALPHABET_SIZE; i++)
 	{
 		if (arrayOfValues[i] != 0)
 			cnt++;
@@ -64,21 +74,14 @@ int newSizeOfColums(int arrayOfValues[ALPHABET_SIZE])
 void createResult(char**& result, int newSize)
 {
 	result = new char* [RESULT_ROWS];
-	for (int i = 0; i < RESULT_ROWS; i++)
+	for (size_t i = 0; i < RESULT_ROWS; i++)
 		result[i] = new char[newSize + 1];
 }
 
-void clearResult(char** result, int size)
-{
-	for (int i = 0; i < size; i++)
-		delete[] result[i];
-	delete[] result;
-}
-
-void fillResult(char**& result, int cols, int arrayWithValues[ALPHABET_SIZE])
+void fillResult(char**& result, int cols, const int arrayWithValues[ALPHABET_SIZE])
 {
 	char ch = 'a';
-	for (int i = 0, j = 0; i < ALPHABET_SIZE && j < cols && ch <= 'z'; i++, ch++)
+	for (size_t i = 0, j = 0; i < ALPHABET_SIZE && j < cols && ch <= 'z'; i++, ch++)
 	{
 		if (arrayWithValues[i] != 0)
 		{
@@ -92,16 +95,6 @@ void fillResult(char**& result, int cols, int arrayWithValues[ALPHABET_SIZE])
 	result[1][cols] = '\0';
 }
 
-void printMatrix(char** const arrayOfStrings, int rows, int cols)
-{
-	for (int i = 0; i < rows; i++)
-	{
-		for (int j = 0; j < cols; j++)
-			cout << arrayOfStrings[i][j] << ' ';
-		cout << endl;
-	}
-}
-
 int main()
 {
 	char** arrayOfStrings;
@@ -113,10 +106,11 @@ int main()
 	
 	char** result;
 	int newSize = newSizeOfColums(arrayWithValues);
+	
 	createResult(result, newSize);
 	fillResult(result, newSize, arrayWithValues);
 	printMatrix(result, RESULT_ROWS, newSize);
 
-	clearResult(result, RESULT_ROWS);
+	free(result, RESULT_ROWS);
 	free(arrayOfStrings, numberOfStrings);
 }
