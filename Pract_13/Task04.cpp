@@ -1,36 +1,47 @@
 #include <iostream>
-using namespace std;
 
-void print(const char* str)
+void printCurrentArr(const int* currentArr, int len)
 {
-	cout << str << endl;
+	for (int i = 0; i < len; i++)
+		std::cout << currentArr[i];
+	std::cout << ' ';
 }
-void getAllNumbersWithIncreasingDigits(int n, char* currentNum, int start)
+
+void allNumbersWithNDigits(int n, int* currentArr, int len, int pos, int start)
 {
-	if (n == 0)
+	if (!n)
 	{
-		currentNum[start] = '\0';
-		print(currentNum);
+		printCurrentArr(currentArr, len);
 		return;
 	}
-	for (char i = '0'; i <= '9'; i++)
+
+	for (int i = 0; i <= 9; i++)
 	{
-		currentNum[start] = i;
-		getAllNumbersWithIncreasingDigits(n - 1, currentNum, start + 1);
+		currentArr[pos] = i;	
+		if (i - start + 1 > pos)
+		{
+			allNumbersWithNDigits(n - 1, currentArr, len, pos + 1, start);
+			start++;
+		}
 	}
 }
-void getAllNumbersWithIncreasingDigits(int n)
-{
-	char* currentNum = new char[n + 1];
-	getAllNumbersWithIncreasingDigits(n, currentNum, 0);
 
-	delete[] currentNum;
+void allNumbersWithNDigits(int n)
+{
+	int len = n;
+	int* current = new int[len];
+	int pos = 0;
+	int start = 0;
+	allNumbersWithNDigits(n, current, len, pos, start);
+
+	delete[] current;
 }
 
 int main()
 {
 	int n;
-	cin >> n;
+	std::cin >> n;
+	allNumbersWithNDigits(n);
 
-	getAllNumbersWithIncreasingDigits(n);
+	return 0;
 }
