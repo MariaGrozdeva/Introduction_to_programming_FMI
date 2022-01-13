@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 const int MAX_WORD_SIZE = 32;
 const int ALPHABET_SIZE = 26;
@@ -6,12 +7,12 @@ const int RESULT_ROWS = 2;
 
 void input(char**& arrayOfStrings, int& numberOfStrings)
 {
-	std::cin >> numberOfStrings;
+	cin >> numberOfStrings;
 	arrayOfStrings = new char* [numberOfStrings];
 	for (int i = 0; i < numberOfStrings; i++)
 	{
 		arrayOfStrings[i] = new char[MAX_WORD_SIZE];
-		std::cin >> arrayOfStrings[i];
+		cin >> arrayOfStrings[i];
 	}
 }
 
@@ -96,8 +97,8 @@ void printMatrix(char** const arrayOfStrings, int rows, int cols)
 	for (int i = 0; i < rows; i++)
 	{
 		for (int j = 0; j < cols; j++)
-			std::cout << arrayOfStrings[i][j] << ' ';
-		std::cout << '\n';
+			cout << arrayOfStrings[i][j] << ' ';
+		cout << endl;
 	}
 }
 
@@ -118,6 +119,4 @@ int main()
 
 	clearResult(result, RESULT_ROWS);
 	free(arrayOfStrings, numberOfStrings);
-
-	return 0;
 }
