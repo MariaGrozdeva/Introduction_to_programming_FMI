@@ -3,7 +3,7 @@ using namespace std;
 
 void printCurrentArr(const int* currentArr, int len)
 {
-	for (int i = 0; i < len; i++)
+	for (size_t i = 0; i < len; i++)
 		cout << currentArr[i];
 	cout << ' ';
 }
@@ -16,7 +16,7 @@ void allNumbersWithNIncreasingDigits(int n, int* currentArr, int len, int pos, i
 		return;
 	}
 
-	for (int i = 0; i <= 9; i++)
+	for (size_t i = 0; i <= 9; i++)
 	{
 		currentArr[pos] = i;	
 		if (i - start + 1 > pos)
