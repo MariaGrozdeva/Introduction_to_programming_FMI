@@ -62,6 +62,8 @@ char // 1 Byte
 	int a = PI; // a=3
 ```
 
+![alt_text](https://i.ibb.co/6r30mB4/Conversion.png)
+
 # 3. Оператори
 
 ![alt text](https://i.ibb.co/zGQYpDK/Operator.png)
