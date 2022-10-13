@@ -120,6 +120,8 @@ char // 1 Byte
 
 ![alt_text](https://i.ibb.co/yd5b4JB/Priority.png)
 
+---
+
 ## ЗАДАЧИ
 :bangbang: Задачите да се решават само чрез неща, учени до момента на семинарите (без if/switch/while...).
 
