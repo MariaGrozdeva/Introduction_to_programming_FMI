@@ -107,7 +107,7 @@ int main()
 	cout << e << endl; // e = 35;
 
 	int f = 5;
-	f += ++f; // Same as f = f + ++f <=> f = 6 + 6 <=> f = 12
+	f += ++f; // f = 12
 	cout << f << endl; // f = 12
 }
 ```
