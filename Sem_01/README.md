@@ -104,7 +104,7 @@ int main()
 
 	int e = 33;
 	(++e)++;
-	cout << e << endl; // e = 35;
+	cout << e << endl; // e = 35
 
 	int f = 5;
 	f += ++f; // f = 12
