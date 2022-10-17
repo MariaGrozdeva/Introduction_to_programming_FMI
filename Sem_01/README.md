@@ -2,17 +2,17 @@
 
 1. Декларация на променлива:
 ```c++
-<datatype> <variable_name>;
+<dataType> <variableName>;
 ```
 2. Дефиниция на променлива:
 ```c++
-<variable_name> = <value>;
+<variableName> = <value>;
 ```
 3. Декларация + дефиниция на променлива:
 ```c++
-<datatype> <variable_name> = <value>;
+<dataType> <variableName> = <value>;
 ```
-![alt_text](https://i.ibb.co/MfcrfYg/Variable.png)
+![alt_text](https://i.ibb.co/LQRmXb2/Decl-And-Init-Of-Var.png)
 
 # 2. Примитивни типове данни (built-in types)
 
