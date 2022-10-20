@@ -51,8 +51,8 @@ default: code.. break; // незадължително - ако променли
 ```c++
  bool keepGoing = true;
  unsigned count = 0;
- 
  int x = 3;
+ 
  while(count++ < 3)
  {
  	int y = (1 + 2 * count) % 3;
