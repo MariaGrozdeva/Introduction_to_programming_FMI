@@ -53,10 +53,10 @@ default: code.. break; // незадължително - ако променли
  unsigned count = 0;
  int x = 3;
  
- while(count++ < 3)
+ while (count++ < 3)
  {
  	int y = (1 + 2 * count) % 3;
- 	switch(y)
+ 	switch (y)
 	{
  	default:
  	case 0: x -= 1; break;
