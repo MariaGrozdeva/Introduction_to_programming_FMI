@@ -39,11 +39,11 @@ else // незадължително
 ```c++
 switch (<целочислена променлива>)
 {
-	case value1: code.. break;
-	case value2: code.. break;
-	case value3: code.. break;
+case value1: code.. break;
+case value2: code.. break;
+case value3: code.. break;
 
-	default: code.. break; // незадължително - ако променливата няма никоя от изредените стойности
+default: code.. break; // незадължително - ако променливата няма никоя от изредените стойности
 }
 ```
 
@@ -58,10 +58,10 @@ switch (<целочислена променлива>)
  	int y = (1 + 2 * count) % 3;
  	switch(y)
 	{
- 		default:
- 		case 0: x -= 1; break;
- 		case 1: x += 5;
-	 }
+ 	default:
+ 	case 0: x -= 1; break;
+ 	case 1: x += 5;
+	}
  }
 std::cout << x; 
 ```
