@@ -35,6 +35,42 @@ else // незадължително
 }  
 ```
 
+### Switch statement
+```c++
+switch (<целочислена променлива>)
+{
+	case value1: code.. break;
+	case value2: code.. break;
+	case value3: code.. break;
+
+	default: code.. break; // незадължително - ако променливата няма никоя от изредените стойности
+}
+```
+
+***Пример:*** Какво ще се отпечата на екрана при изпълнение на следния програмен фрагмент:
+```c++
+ bool keepGoing = true;
+ unsigned count = 0;
+ 
+ int x = 3;
+ while(count++ < 3)
+ {
+ 	int y = (1 + 2 * count) % 3;
+ 	switch(y)
+	{
+ 		default:
+ 		case 0: x -= 1; break;
+ 		case 1: x += 5;
+	 }
+ }
+std::cout << x; 
+```
+
+### Тернарен оператор
+```c++
+<условие> ? <израз1> : <израз2>
+```
+
 ---
 
 ## ЗАДАЧИ
