@@ -49,20 +49,20 @@ default: code.. break; // незадължително - ако променли
 
 ***Пример:*** Какво ще се отпечата на екрана при изпълнение на следния програмен фрагмент?
 ```c++
- bool keepGoing = true;
- unsigned count = 0;
- int x = 3;
- 
- while (count++ < 3)
- {
- 	int y = (1 + 2 * count) % 3;
- 	switch (y)
+bool keepGoing = true;
+unsigned count = 0;
+int x = 3;
+
+while (count++ < 3)
+{
+	int y = (1 + 2 * count) % 3;
+	switch (y)
 	{
  	default:
  	case 0: x -= 1; break;
  	case 1: x += 5;
 	}
- }
+}
 std::cout << x; 
 ```
 
