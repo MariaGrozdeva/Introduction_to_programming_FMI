@@ -3,10 +3,10 @@ using namespace std;
 
 int main()
 {
-	int n;
+	unsigned n;
 	cin >> n;
 
-	int lastDigit = n % 10;
+	short lastDigit = n % 10;
 
 	switch (lastDigit)
 	{
