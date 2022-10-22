@@ -129,20 +129,8 @@ for (initialization; condition; step)
 ![alt_text](https://i.ibb.co/KwVCf1z/Task07-spiral.png)
 
 **Задача 8:** Да се напише програма, която по въведено цяло положително число *извежда пирамида във вида*:  
-*Вход: 4  
-Изход:   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 2 1   
-&nbsp;&nbsp;&nbsp;1 2 3 2 1   
-1 2 3 4 3 2 1*  
 
-*Вход: 5  
-Изход:   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 2 1   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 2 3 2 1   
-&nbsp;&nbsp;&nbsp;1 2 3 4 3 2 1  
-1 2 3 4 5 4 3 2 1*  
+![alt_text](https://i.ibb.co/NLzrjH9/Task08-pyramid.png)
 
 **Задача 9:** Въвеждат се 5 цели числа - **a, b, c, d, e**. Разглеждаме полинома f(x) = a\*x^4 + b\*x^3 + c\*x^2 + d\*x + e. *Отпечатайте всички цели решения на f(x) >= 0, където x e в интервала [-100, 100]*.  
 *Вход: -1 4 0 8 1, Изход: -1 0 2 3  
