@@ -9,9 +9,9 @@ short longestIncreasingSubsequence(unsigned n) // It's actually subarray, not su
 	while (n >= 10)
 	{
 		short lastDigit = n % 10;
-		short currentDigit = (n / 10) % 10;
+		short preLastDigit = (n / 10) % 10;
 
-		if (currentDigit < lastDigit)
+		if (preLastDigit < lastDigit)
 		{
 			currentMax++;
 			if (currentMax > max)
