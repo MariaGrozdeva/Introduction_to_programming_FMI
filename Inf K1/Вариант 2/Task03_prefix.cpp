@@ -1,6 +1,23 @@
 #include <iostream>
 using namespace std;
 
+unsigned reverse(unsigned n)
+{
+	unsigned reversed = 0;
+	while (n != 0)
+	{
+		short lastDigit = n % 10;
+		(reversed *= 10) += lastDigit;
+		n /= 10;
+	}
+
+	return reversed;
+}
+bool isPalindrome(unsigned n)
+{
+	return n == reverse(n);
+}
+
 int main()
 {
 	unsigned n;
@@ -12,16 +29,7 @@ int main()
 		if (currentPrefix == 0)
 			break;
 
-		unsigned tempCurrentPrefix = currentPrefix;
-		unsigned reversedCurrentPrefix = 0;
-		while (tempCurrentPrefix != 0)
-		{
-			short lastDigit = tempCurrentPrefix % 10;
-			(reversedCurrentPrefix *= 10) += lastDigit;
-			tempCurrentPrefix /= 10;
-		}
-
-		if (currentPrefix == reversedCurrentPrefix)
+		if (isPalindrome(currentPrefix))
 		{
 			cout << currentPrefix << endl;
 		}
