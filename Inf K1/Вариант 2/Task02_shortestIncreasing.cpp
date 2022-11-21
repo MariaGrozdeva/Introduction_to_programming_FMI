@@ -29,7 +29,7 @@ void printShortestSubsequenceOfEqualNumbers(unsigned long long n) // It's actual
 		n /= 10;
 	}
 
-	if (currentMin < min) // Corner case when the min subsequence is in the beginning and consists of >= 2 digits
+	if (currentMin < min) // When the min subsequence is in the beginning and consists of >= 2 digits
 	{
 		cout << currentMin << " (" << n << ")";
 		return;
