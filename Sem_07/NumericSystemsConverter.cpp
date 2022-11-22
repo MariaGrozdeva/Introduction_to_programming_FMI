@@ -20,10 +20,7 @@ unsigned short getIndexOfSymbol(char ch)
 	{
 		return 10 + (ch - 'A');
 	}
-	else
-	{
-		return -1;
-	}
+	return -1;
 }
 char getSymbolByIndex(unsigned short index)
 {
@@ -35,10 +32,7 @@ char getSymbolByIndex(unsigned short index)
 	{
 		return (index - 10) + 'A';
 	}
-	else
-	{
-		return 0;
-	}
+	return 0;
 }
 
 unsigned int randomToDecimal(const char from[], size_t len, unsigned short k)
