@@ -45,8 +45,8 @@ void inputCoordinates(const char board[][BOARD_SIZE], unsigned short& x, unsigne
 
 bool checkIfRowColContainsSameMarks(const char board[][BOARD_SIZE], char mark, unsigned short markRow, unsigned short markCol, bool checkRow)
 {
-	unsigned row = checkRow ? markRow : 0;
-	unsigned col = checkRow ? 0 : markCol;
+	unsigned short row = checkRow ? markRow : 0;
+	unsigned short col = checkRow ? 0 : markCol;
 
 	for (; row < BOARD_SIZE && col < BOARD_SIZE; row += !checkRow, col += checkRow)
 	{
@@ -72,36 +72,34 @@ bool isInSecondaryDiagonal(unsigned short markRow, unsigned short markCol)
 	return markRow + markCol == BOARD_SIZE - 1;
 }
 
-bool checkIfDiagonalContainsSameMarks(const char board[][BOARD_SIZE], char mark, unsigned short markRow, unsigned short markCol, int rowChange, int colChange)
+bool checkIfDiagonalContainsSameMarks(const char board[][BOARD_SIZE], char mark, unsigned short markRow, unsigned short markCol, bool checkPrincipal)
 {
-	for (int rowInd = markRow, colInd = markCol; rowInd >= 0 && rowInd < BOARD_SIZE && colInd >= 0 && colInd < BOARD_SIZE;
-		rowInd += rowChange, colInd += colChange)
+	int row = checkPrincipal ? 0 : BOARD_SIZE - 1;
+	int col = 0;
+	int updateRow = checkPrincipal ? 1 : -1;
+	int updateCol = 1;
+
+	for (; row >= 0 && row < BOARD_SIZE && col >= 0 && col < BOARD_SIZE; row += updateRow, col += updateCol)
 	{
-		if (board[rowInd][colInd] != mark)
+		if (board[row][col] != mark)
 		{
 			return false;
 		}
 	}
 	return true;
 }
-bool diagonalFilledWithMark(const char board[][BOARD_SIZE], char mark, unsigned short markRow, unsigned short markCol)
+bool diagonalsFilledWithMark(const char board[][BOARD_SIZE], char mark, unsigned short markRow, unsigned short markCol)
 {
-	// 1. checks the elements in the PRINCIPAL diagonal BELOW the given cell
-	// 2. checks the elements in the PRINCIPAL diagonal ABOVE the given cell
-	// 3. checks the elements in the SECONDARY diagonal BELOW the given cell
-	// 4. checks the elements in the SECONDARY diagonal ABOVE the given cell
+	// 1. checks the elements in the principal diagonal
+	// 2. checks the elements in the secondary diagonal
 
-	return (isInPrincipalDiagonal(markRow, markCol) &&
-		checkIfDiagonalContainsSameMarks(board, mark, markRow, markCol, 1, 1) &&
-		checkIfDiagonalContainsSameMarks(board, mark, markRow, markCol, -1, -1)) ||
-		(isInSecondaryDiagonal(markRow, markCol) &&
-			checkIfDiagonalContainsSameMarks(board, mark, markRow, markCol, 1, -1) &&
-			checkIfDiagonalContainsSameMarks(board, mark, markRow, markCol, -1, 1));
+	return (isInPrincipalDiagonal(markRow, markCol) && checkIfDiagonalContainsSameMarks(board, mark, markRow, markCol, true)) ||
+		(isInSecondaryDiagonal(markRow, markCol) && checkIfDiagonalContainsSameMarks(board, mark, markRow, markCol, false));
 }
 
 bool isWinner(const char board[][BOARD_SIZE], char mark, unsigned short markRow, unsigned short markCol)
 {
-	return rowOrColFilledWithMark(board, mark, markRow, markCol) || diagonalFilledWithMark(board, mark, markRow, markCol);
+	return rowOrColFilledWithMark(board, mark, markRow, markCol) || diagonalsFilledWithMark(board, mark, markRow, markCol);
 }
 
 int main()
