@@ -35,3 +35,8 @@
 ||bab|
 ||bba|
 ||bbb|  
+
+### Задача 5 (Tower of Hanoi):
+Да се напише ***рекурсивна*** функция, която *решава задачата за ханойските кули*.  
+
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_13/Tower-Of-Hanoi.png)
