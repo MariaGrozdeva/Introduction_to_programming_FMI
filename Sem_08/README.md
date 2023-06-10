@@ -54,7 +54,7 @@ int main()
    pNumber1 = &number2;        // Pointer can be reassigned to store another address
  
    // Create a reference (alias) to number1
-   int & refNumber1 = number1;  // Implicit referencing (NOT &number1)
+   int& refNumber1 = number1;  // Implicit referencing (NOT &number1)
    refNumber1 = 11;             // Implicit dereferencing (NOT *refNumber1)
    cout << refNumber1 << endl;  // 11
    cout << &number1 << endl;    // 0x22ff18
