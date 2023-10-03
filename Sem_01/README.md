@@ -24,9 +24,9 @@
 
 3. Числа с плаваща запетая (**Floating-point types**)
 ```c++
-float - single precision floating-point type;  
-double - double precision floating-point type;  
-long double - extended precision floating-point type.
+float - single precision floating-point type  
+double - double precision floating-point type  
+long double - extended precision floating-point type
 ```
 
 4. Булев тип (**Boolean type**)
