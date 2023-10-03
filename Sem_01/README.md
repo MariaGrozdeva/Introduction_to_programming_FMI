@@ -24,19 +24,19 @@
 
 3. Числа с плаваща запетая (**Floating-point types**)
 ```c++
-float - single precision floating-point type; // 4 Bytes  
-double - double precision floating-point type;  // 8 Bytes  
+float - single precision floating-point type;  
+double - double precision floating-point type;  
 long double - extended precision floating-point type.
 ```
 
 4. Булев тип (**Boolean type**)
 ```c++
-bool // Most often is 1 Byte
+bool
 ```
 
 5. Символни типове (**Character types**)
 ```c++
-char // 1 Byte
+char
 ```
 
 ## Преобразуване между типове
