@@ -46,21 +46,21 @@ char
  - **Без загуба** на информация.
 ```c++
 	bool b = true;
-	int a = b; // a=1
+	int a = b; // a == 1
 ```
 ```c++
 	int a = 4; 
-	double d = a; // d=4.0 
+	double d = a; // d == 4.0 
 ```
 
  - **Със загуба** на информация.
 ```c++
 	int a = 10;
-	bool b = a; // b=1 
+	bool b = a; // b == 1 
 ```
 ```c++
 	double PI = 3.14;
-	int a = PI; // a=3
+	int a = PI; // a == 3
 ```
 
 ![alt_text](https://i.ibb.co/6r30mB4/Conversion.png)
