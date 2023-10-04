@@ -22,19 +22,19 @@
 
 ![alt_text](https://i.ibb.co/QJGC8dN/Int.png)
 
-3. Числа с плаваща запетая (**Floating-point types**)
+2. Числа с плаваща запетая (**Floating-point types**)
 ```c++
 float - single precision floating-point type  
 double - double precision floating-point type  
 long double - extended precision floating-point type
 ```
 
-4. Булев тип (**Boolean type**)
+3. Булев тип (**Boolean type**)
 ```c++
 bool
 ```
 
-5. Символни типове (**Character types**)
+4. Символни типове (**Character types**)
 ```c++
 char
 ```
