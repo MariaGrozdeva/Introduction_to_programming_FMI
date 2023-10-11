@@ -134,10 +134,10 @@ int main()
 
 |x  |y  | !x| x && y| x \|\| y|  
 |--|--|--|--|--|  
-| true | true  |false|true|true|  
-| true | false |false|false|true|  
-| false| true  |true|false|true|  
 | false| false |true|false|false|  
+| false| true  |true|false|true|  
+| true | false |false|false|true|  
+| true | true  |false|true|true|  
  
  ### 4. Оператори за присвояване – присвояват стойност на дадена променлива  
  |Оператор|Описание|  
