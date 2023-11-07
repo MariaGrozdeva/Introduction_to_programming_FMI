@@ -1,6 +1,6 @@
 # Функции
 
-![alt_text](https://i.ibb.co/d4zSqHF/functions.png)
+![alt_text](https://i.ibb.co/d4zSqHF/Functions.png)
 
 ### Синтаксис:
 ```c++
