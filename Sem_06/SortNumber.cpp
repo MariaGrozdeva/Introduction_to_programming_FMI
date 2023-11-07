@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// Напишете функция, която приема цяло число n и сортира цифрите му в низходящ ред.
+
 unsigned concatDigitAtBack(unsigned n, short digit)
 {
 	return n * 10 + digit;
