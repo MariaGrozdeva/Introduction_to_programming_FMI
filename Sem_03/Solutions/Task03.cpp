@@ -6,15 +6,15 @@ int main()
 	int a, b;
 	cin >> a >> b;
 
-	for (int i = a; i <= b; i++)
+	for (size_t i = a; i <= b; i++)
 	{
-		int keep_i = i;
+		int keepI = i;
 		bool unique = true;
 
-		while (keep_i != 0)
+		while (keepI != 0)
 		{
-			int quotient = keep_i / 10;
-			int remainder = keep_i % 10;
+			int quotient = keepI / 10;
+			int remainder = keepI % 10;
 
 			while (quotient != 0)
 			{
@@ -27,12 +27,16 @@ int main()
 			}
 
 			if (!unique)
+			{
 				break;
+			}
 
-			keep_i /= 10;
+			keepI /= 10;
 		}
 
 		if (unique)
+		{
 			cout << i << "    ";
+		}
 	}
 }
