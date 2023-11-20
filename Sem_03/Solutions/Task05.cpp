@@ -9,7 +9,6 @@ int main()
 	do
 	{
 		cin >> number;
-
 		sum += number;
 	} while (number);
 
