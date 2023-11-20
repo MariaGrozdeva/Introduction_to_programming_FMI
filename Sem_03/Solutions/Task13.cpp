@@ -27,7 +27,7 @@ int main()
 		}
 		else
 		{
-			for (int j = 0; j < cols; j++) 
+			for (size_t j = 0; j < cols; j++) 
 			{
 				if (j == middle)
 				{
