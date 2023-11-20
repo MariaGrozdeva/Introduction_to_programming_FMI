@@ -1,14 +1,15 @@
 #include <iostream>
+using namespace std;
 
 int main()
 {
 	int a, b;
-	std::cin >> a >> b;
+	cin >> a >> b;
 
 	bool match = false;
 	int cnt = 0;
 
-	for (int i = a; i <= b; i++)
+	for (size_t i = a; i <= b; i++)
 	{
 		int sum = 0;
 		int prod = 1;
@@ -19,7 +20,9 @@ int main()
 			int reminder = temp % 10;
 
 			if (reminder == 0)
+			{
 				prod = 1;
+			}
 
 			sum += reminder;
 			prod *= reminder;
@@ -28,10 +31,10 @@ int main()
 		}
 
 		if (sum == prod)
+		{
 			cnt++;
+		}
 	}
 
-	std::cout << cnt;
-
-	return 0;
+	cout << cnt;
 }
