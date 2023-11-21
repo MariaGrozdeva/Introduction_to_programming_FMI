@@ -14,11 +14,11 @@ int arr[4] = { 1, 2, 3, 4, 5 }; // error: too many initializers for ‘int [4]�
 
 :bangbang: Задължително големината на масива трябва да е константа, чиято стойност е известна **по време на компилация**.
 ```c++
-int n;
+size_t n;
 cin >> n;
 int arr[n]; // error!
 
-constexpr int SIZE = 4;
+constexpr size_t SIZE = 4;
 int arr[SIZE]; // ok!
  ```
 
@@ -66,7 +66,7 @@ void increment(int arr[], const size_t len)
 
 int main()
 {
-    constexpr int SIZE = 4;
+    constexpr size_t SIZE = 4;
     int arr[SIZE] = { 1, 2, 3, 4 };
  
     increment(arr, SIZE);
