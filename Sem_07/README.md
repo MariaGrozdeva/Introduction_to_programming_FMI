@@ -2,7 +2,7 @@
 
 **Указател** - променлива, която съдържа адреса на друга променлива.  
 
-![alt_text](https://i.ibb.co/xgDQ6gy/Pointer.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_07/images/Pointer.png)
 
 1. Оператор **&**:
 - приема променлива от тип Т;
@@ -72,7 +72,7 @@ int main()
 
 ### Указателна аритметика :heavy_exclamation_mark:
 
-![alt_text](https://i.ibb.co/B6JDb4J/Pointer-Arithmetic.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_07/images/PointerArithmetic.png)
 
 ### Примери
 - Достъпване на елемента на k-ти индекс в масив **без оператор []**;
@@ -93,7 +93,7 @@ int cube[3][3][3]; // създава се тримерен масив
 ```
 ### Как изглежда многомерен масив в паметта?
 
-![alt_text](https://i.ibb.co/09K0718/Matrix-In-Mem.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_07/images/Matrix.png)
 
 ### Указателна аритметика върху двумерни масиви
 ```c++
@@ -109,7 +109,7 @@ cout << (**(matrix1 + 1) + 3); // елементът на нулев индек�
 ## Задачи
 **Задача 0:** Реализирайте играта **_"Морски шах" (Tic-tac-toe)_**.  Реализирайте програмата така, че да може смяната на големината на полето да става чрез промяна стойността на една константа.  
 
-![alt_text](https://i.ibb.co/KLP4LkX/Tic-tac-toe.jpg)  
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_07/images/TicTacToe.jpeg)
 
 **Задача 1:** Напишете функция, която приема матрица NxN и транспонира матрицата.  
 
