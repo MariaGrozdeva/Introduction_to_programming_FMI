@@ -12,7 +12,7 @@
 ```c++
 <dataType> <variableName> = <value>;
 ```
-![alt_text](https://i.ibb.co/LQRmXb2/Decl-And-Init-Of-Var.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_01/images/Variable.png)
 
 ---
 
@@ -20,7 +20,7 @@
 
 1. Целочислени типове (**Integer types**)
 
-![alt_text](https://i.ibb.co/QJGC8dN/Int.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_01/images/DataTypes.png)
 
 2. Числа с плаваща запетая (**Floating-point types**)
 ```c++
@@ -63,13 +63,13 @@ char
 	int a = PI; // a == 3
 ```
 
-![alt_text](https://i.ibb.co/6r30mB4/Conversion.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_01/images/Casting.png)
 
 ---
 
 # 3. Оператори
 
-![alt text](https://i.ibb.co/zGQYpDK/Operator.png)
+![alt text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_01/images/Operators.png)
 
  ### 1. Аритметични оператори - извършват математически операции
 |Оператор|Описание|
@@ -154,7 +154,7 @@ int main()
 - **Асоциативност**;
 - **Позиция на оператора спярмо аргумента** -  *префиксен*, *инфиксен*  и  *суфиксен (постфиксен)*.
 
-![alt_text](https://i.ibb.co/yd5b4JB/Priority.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_01/images/OperatorCharacteristics.png)
 
 ---
 
