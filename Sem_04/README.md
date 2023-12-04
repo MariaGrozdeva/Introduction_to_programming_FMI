@@ -1,6 +1,6 @@
 # Функции
 
-![alt_text](https://i.ibb.co/d4zSqHF/Functions.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_04/images/Functions.png)
 
 ### Синтаксис:
 ```c++
