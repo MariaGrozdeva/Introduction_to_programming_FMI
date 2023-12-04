@@ -26,7 +26,7 @@ int arr[SIZE]; // ok!
 Едно от най- големите предимства на масивите е това, че в тях имаме *константен достъп до всеки един елемент*.  
 Този достъп се осъществява посредством индекси. ***Индексацията започва от 0***. Защо?  
 
-![alt_text](https://i.ibb.co/Ssc3GFW/Indices-Start-From-Zero.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_06/images/Array.png)
 
 ```c++
 int arr[] = { 5, 23, 24, 22 }
@@ -41,7 +41,7 @@ int arr[] = { 5, 23, 24, 22 }
 cout << arr; // 0x7ffd9bc35d90
 ```
 
-![alt_text](https://i.ibb.co/G5rkLND/Array.jpg)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_06/images/ArrayIndices.jpeg)
 
 ## Масив като параметър на функция
 :bangbang: Масивите се подават във функциите по адрес. Това означава, че промените, които се извършват върху масива във функцията, ще се отразят върху подадения като аргумент масив.
@@ -81,7 +81,7 @@ int main()
 - Двоично търсене в масив
 - Обръщане на масив
 - Решето на Ератостен  
-![alt_text](https://i.ibb.co/WvMGkZz/Sieve-of-Eratosthenes.gif)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_06/images/Eratosthenes.gif)
 
 ---
 
@@ -97,7 +97,7 @@ int main()
 
 **Задача 3:** Напишете функция, която намира най- малкия липсващ елемент в **сортиран** масив от **последователни** числа.  
 
-![alt_text](https://i.ibb.co/wMPMfhR/Missing-element.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_06/images/SmallestMissingElement.png)
 
 **Задача 4:** Ще казваме, че поредица от числа е **трион**, ако всяко число в нея е едновременно по- голямо или равно на двата си съседа или едновременно по- малко или равно на тях.  
 За първия и последния елемент имаме само по един съсед.  
@@ -127,4 +127,4 @@ int main()
 **Задача 9:** Напишете функция, която приема цяло k и попълва в масив стойностите от k-тия ред на [триъгълника на Паскал](https://en.wikipedia.org/wiki/Pascal%27s_triangle). Броенето на редовете започва от единица!  
 *Вход: 6, Изход: 1 5 10 10 5 1*  
 
-![alt_text](https://github.com/MariaGrozdeva/UP_private_NG/blob/main/Sem_06/PascalTriangle.gif)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_06/images/PascalTriangle.gif)
