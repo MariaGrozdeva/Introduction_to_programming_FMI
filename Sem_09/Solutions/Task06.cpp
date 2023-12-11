@@ -9,7 +9,7 @@ bool isValidWordSymbol(const char symbol)
 
 unsigned int getWordsCount(const char* str)
 {
-    int wordsCount = 0;
+    unsigned int wordsCount = 0;
     bool isPrevSymbolValid = false;
     
     while (*str != '\0')
