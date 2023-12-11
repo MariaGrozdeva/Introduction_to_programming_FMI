@@ -42,32 +42,23 @@ void myStrcat(char* dest, const char* src)
 	myStrcpy(dest, src);
 }
 
+// - lhs < rhs
+// 0 lhs == rhs
+// + lhs > rhs
 int myStrcmp(const char* lhs, const char* rhs)
 {
 	if (lhs == nullptr || rhs == nullptr)
 	{
-		return -2; // an exception should be thrown here
+		return 0; // some error value
 	}
 
-	while (*lhs != '\0' && *rhs != '\0')
+	while (*lhs && *rhs && (*lhs == *rhs))
 	{
-		if (*lhs < *rhs)
-		{
-			return -1;
-		}
-		if (*lhs > *rhs)
-		{
-			return 1;
-		}
 		lhs++;
 		rhs++;
 	}
 
-	if (*lhs == '\0' && *rhs == '\0')
-	{
-		return 0;
-	}
-	return *lhs == '\0' ? -1 : 1;
+	return (*lhs - *rhs);
 }
 
 bool isDigit(char ch)
@@ -78,7 +69,7 @@ int myAtoi(const char* str)
 {
 	if (str == nullptr)
 	{
-		return 0;
+		return 0; // some error value
 	}
 
 	bool negative = false;
