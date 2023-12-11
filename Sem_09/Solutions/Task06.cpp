@@ -7,7 +7,7 @@ bool isValidWordSymbol(const char symbol)
     return (symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z') || (symbol >= '0' && symbol <= '9') || symbol == '_';
 }
 
-int getWordsCount(const char* str)
+unsigned int getWordsCount(const char* str)
 {
     int wordsCount = 0;
     bool isPrevSymbolValid = false;
