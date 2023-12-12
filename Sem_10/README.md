@@ -14,7 +14,7 @@ type* ptr = new type[elementsCount]
 size_t n = 5;
 int* foo = new int[n];
 ```
-![alt_text](https://i.ibb.co/x7Vt7Bd/foo.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_10/images/Foo.png)  
 
 ### Оператори delete и delete[]
 **Паметта, заделена в стека, се освобождава автоматично**. *Например*, при деклариране на локална променлива във функция се заделя памет за нея, при приключване на функцията – паметта се освобождава. **При динамичната памет ние трябва да се грижим за нейното освобождаване** – когато вече не ни е нужна, трябва да я "декларираме" като свободна, за да може да бъде използвана от други. Това се постига чрез оператора **delete**.
@@ -27,11 +27,11 @@ delete[] ptr;
 
 :bangbang::bangbang::bangbang: **За всяко new задължително delete** :bangbang::bangbang::bangbang:
 
-![alt_text](https://i.ibb.co/b7Cm6xX/Stack-Vs-Heap.png)  
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_10/images/Stack-Vs-Heap.png)  
 
-![alt_text](https://i.ibb.co/Cw1SNpb/first.png)  
-![alt_text](https://i.ibb.co/NjL52pP/second.png)  
-![alt_text](https://i.ibb.co/f92320H/third.png)  
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_10/images/First.png)  
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_10/images/Second.png)  
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_10/images/Third.png)  
 
 ---
 
