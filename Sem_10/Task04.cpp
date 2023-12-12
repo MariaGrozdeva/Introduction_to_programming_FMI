@@ -29,7 +29,7 @@ void getUppercaseAndLowercaseCount(const char* str, unsigned int& uppercaseCount
 
 void getuppercaseStrandlowercaseStr(const char* str, char*& uppercaseStr, char*& lowercaseStr)
 {
-	if (str == nullptr)
+	if (!str)
 	{
 		return;
 	}
