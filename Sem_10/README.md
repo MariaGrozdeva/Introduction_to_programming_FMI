@@ -27,7 +27,7 @@ delete[] ptr;
 
 :bangbang::bangbang::bangbang: **За всяко new задължително delete** :bangbang::bangbang::bangbang:
 
-![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_10/images/Stack-Vs-Heap.png)  
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_10/images/StackVsHeap.png)  
 
 ![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_10/images/First.png)  
 ![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_10/images/Second.png)  
