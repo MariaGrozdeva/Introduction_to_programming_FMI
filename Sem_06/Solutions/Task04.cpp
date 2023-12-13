@@ -17,6 +17,7 @@ void swap(int& a, int& b)
 	b = temp;
 }
 
+// NB!! Works only for arrays with unique elements
 void convertToTrion(int arr[], const size_t len)
 {
 	for (size_t i = 1; i < len - 1; i++)
@@ -31,7 +32,7 @@ void convertToTrion(int arr[], const size_t len)
 
 int main()
 {
-	int arr[] = { 1, 5, 1, 0, 3 };
+	int arr[] = { 5, 4, 3, 2, 1 };
 	size_t len = sizeof(arr) / sizeof(int);
 
 	convertToTrion(arr, len);
