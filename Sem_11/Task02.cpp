@@ -37,7 +37,7 @@ void strcpyWithGivenSIze(char* dest, const char* src, const size_t srcSize)
 
 size_t strlenToSpace(const char* text)
 {
-	unsigned int length = 0;
+	size_t length = 0;
 	while (*text != '\0' && *text != ' ')
 	{
 		length++;
@@ -46,9 +46,9 @@ size_t strlenToSpace(const char* text)
 	return length;
 }
 
-unsigned int getWordsCount(const char* text)
+unsigned getWordsCount(const char* text)
 {
-	unsigned int count = 0;
+	unsigned count = 0;
 	while (*text)
 	{
 		if (*text == ' ')
