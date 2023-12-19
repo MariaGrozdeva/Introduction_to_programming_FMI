@@ -11,7 +11,7 @@ for (size_t i = 0; i < rowsCount; i++)
 ```
 При rowsCount = 4 и colsCount = 5, резултатът ще е следният:
 
-![alt_text](https://i.ibb.co/fM8fw3n/Dynamic-Matrix.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_11/images/DynamicMatrix.png)
 
 2.	 Изтриване
 ```c++
