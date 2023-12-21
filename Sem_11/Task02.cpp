@@ -1,19 +1,11 @@
 #include <iostream>
+#include <cassert>
 #include <cstring>
 using namespace std;
 
 #pragma warning (disable : 4996)
 
 const size_t censorePatternSize = 2;
-
-void printWords(const char* const* words, const unsigned wordsCount)
-{
-	for (size_t i = 0; i < wordsCount; i++)
-	{
-		cout << words[i] << ' ';
-	}
-	cout << endl;
-}
 
 void free(char** words, const unsigned wordsCount)
 {
@@ -22,6 +14,29 @@ void free(char** words, const unsigned wordsCount)
 		delete[] words[i];
 	}
 	delete[] words;
+}
+
+unsigned getWordsCount(const char* text)
+{
+	unsigned count = 0;
+	while (*text)
+	{
+		if (*text == ' ')
+		{
+			count++;
+		}
+		text++;
+	}
+	return count + 1;
+}
+
+void printWords(const char* const* words, const unsigned wordsCount)
+{
+	for (size_t i = 0; i < wordsCount; i++)
+	{
+		cout << words[i] << ' ';
+	}
+	cout << endl;
 }
 
 void strcpyWithGivenSIze(char* dest, const char* src, const size_t srcSize)
@@ -37,6 +52,11 @@ void strcpyWithGivenSIze(char* dest, const char* src, const size_t srcSize)
 
 size_t strlenToSpace(const char* text)
 {
+    if (!text)
+    {
+        return 0;
+    }
+    
 	size_t length = 0;
 	while (*text != '\0' && *text != ' ')
 	{
@@ -44,20 +64,6 @@ size_t strlenToSpace(const char* text)
 		text++;
 	}
 	return length;
-}
-
-unsigned getWordsCount(const char* text)
-{
-	unsigned count = 0;
-	while (*text)
-	{
-		if (*text == ' ')
-		{
-			count++;
-		}
-		text++;
-	}
-	return count + 1;
 }
 
 char* extractText(char** words, const unsigned wordsCount)
@@ -84,7 +90,7 @@ char* extractText(char** words, const unsigned wordsCount)
 	return resultText;
 }
 
-void fillWordsToArrayOfWords(char** words, const char* text, const unsigned wordsCount)
+void fillWordsToArrayOfWords(char** words, const unsigned wordsCount, const char* text)
 {
 	for (size_t i = 0; i < wordsCount; i++)
 	{
@@ -97,15 +103,20 @@ void fillWordsToArrayOfWords(char** words, const char* text, const unsigned word
 	}
 }
 
-void changeWordByIndex(char** words, const unsigned index, const char* newWord)
+void changeWordByIndex(char** words, const unsigned wordsCount, const unsigned index, const char* newWord)
 {
+    assert(index < wordsCount);
+    
 	delete[] words[index];
 	words[index] = new char[strlen(newWord) + censorePatternSize + 1];
 	strcpy(words[index], newWord);
 }
 
-void censoreOrDiscensore(char** words, const unsigned index)
+void censoreOrDiscensore(char** words, const unsigned wordsCount, const unsigned index)
 {
+    assert(index < wordsCount);
+
+    
 	if (strcmp(words[index], "*") == 0)
 	{
 		strcpy(words[index], words[index] + censorePatternSize);
@@ -130,25 +141,25 @@ int main()
 
 	size_t wordsCount = getWordsCount(buff);
 	char** textArr = new char*[wordsCount];
-	fillWordsToArrayOfWords(textArr, buff, wordsCount);
+	fillWordsToArrayOfWords(textArr, wordsCount, buff);
 
     	cout << endl << "Initial:" << endl;
 	printWords(textArr, wordsCount);
 
 	cout << endl << "Censore the first word:" << endl;
-	censoreOrDiscensore(textArr, 1);
+	censoreOrDiscensore(textArr, wordsCount, 1);
 	printWords(textArr, wordsCount);
 
 	cout << endl << "Censore the second word:" << endl;
-	censoreOrDiscensore(textArr, 2);
+	censoreOrDiscensore(textArr, wordsCount, 2);
 	printWords(textArr, wordsCount);
 
 	cout << endl << "Discensore the first word:" << endl;
-	censoreOrDiscensore(textArr, 1);
+	censoreOrDiscensore(textArr, wordsCount, 1);
 	printWords(textArr, wordsCount);
 
 	cout << endl << "Change the first word:" << endl;
-	changeWordByIndex(textArr, 1, "TESTCHANGE");
+	changeWordByIndex(textArr, wordsCount, 1, "TESTCHANGE");
 	printWords(textArr, wordsCount);
 
 	cout << endl << "Final:" << endl;
