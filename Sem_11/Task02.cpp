@@ -52,10 +52,10 @@ void strcpyWithGivenSIze(char* dest, const char* src, const size_t srcSize)
 
 size_t strlenToSpace(const char* text)
 {
-    if (!text)
-    {
-        return 0;
-    }
+	if (!text)
+    	{
+        	return 0;
+    	}
     
 	size_t length = 0;
 	while (*text != '\0' && *text != ' ')
@@ -105,7 +105,7 @@ void fillWordsToArrayOfWords(char** words, const unsigned wordsCount, const char
 
 void changeWordByIndex(char** words, const unsigned wordsCount, const unsigned index, const char* newWord)
 {
-    assert(index < wordsCount);
+    	assert(index < wordsCount);
     
 	delete[] words[index];
 	words[index] = new char[strlen(newWord) + censorePatternSize + 1];
@@ -114,8 +114,7 @@ void changeWordByIndex(char** words, const unsigned wordsCount, const unsigned i
 
 void censoreOrDiscensore(char** words, const unsigned wordsCount, const unsigned index)
 {
-    assert(index < wordsCount);
-
+    	assert(index < wordsCount);
     
 	if (strcmp(words[index], "*") == 0)
 	{
