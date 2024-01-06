@@ -25,7 +25,7 @@ void removeDigits(const char* str, char*& result)
 	size_t strLen = strlen(str);
 	result = new char[strLen - getDigitsCount(str) + 1];
 
-	char newStrIter = 0;
+	unsigned int newStrIter = 0;
 	for (size_t i = 0; i < strLen; i++)
 	{
 		if (!isDigit(str[i]))
