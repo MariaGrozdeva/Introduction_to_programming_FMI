@@ -14,7 +14,7 @@ unsigned int getMinimumOperations(unsigned int n)
 	minOperations[2] = 1;
 	minOperations[3] = 1;
 
-	for (unsigned int i = 4; i <= n; i++)
+	for (size_t i = 4; i <= n; i++)
 	{
 		unsigned int v1 = i % 3 == 0 ? minOperations[i / 3] : UINT_MAX;
     		unsigned int v2 = i % 2 == 0 ? minOperations[i / 2] : UINT_MAX;
