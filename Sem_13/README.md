@@ -1,7 +1,5 @@
 # Рекурсия - втора част
 
-![enter image description here](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz84V6hk9rI_7h5cDUMGKJPw2Xy0WjQ_IiCsvyV1LFsg&s)
-
 ### Задача 1:
 Да се напише ***рекурсивна*** функция, която приема два символни низа и *връща дали вторият е подниз на първия*.  
 
@@ -61,4 +59,4 @@
 ### Задача 7 (Tower of Hanoi):
 Да се напише ***рекурсивна*** функция, която *решава задачата за ханойските кули*.  
 
-![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_13/Tower-Of-Hanoi.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/Sem_13/images/Tower-Of-Hanoi.png)
