@@ -16,17 +16,17 @@ unsigned getCharCountCondition(const char* str, bool(*pred)(char))
 
 unsigned getLowersCount(const char* str)
 {
-    return getCharCountCondition(str, [](char ch){ return ch >= 'a' && ch <= 'z'; });
+    return getCharCountCondition(str, [](char ch) { return ch >= 'a' && ch <= 'z'; });
 }
 
 unsigned getCapitalsCount(const char* str)
 {
-    return getCharCountCondition(str, [](char ch){ return ch >= 'A' && ch <= 'Z'; });
+    return getCharCountCondition(str, [](char ch) { return ch >= 'A' && ch <= 'Z'; });
 }
 
 unsigned getDigitsCount(const char* str)
 {
-    return getCharCountCondition(str, [](char ch){ return ch >= '0' && ch <= '9'; });
+    return getCharCountCondition(str, [](char ch) { return ch >= '0' && ch <= '9'; });
 }
 
 unsigned getWhitespacesCount(const char* str)
