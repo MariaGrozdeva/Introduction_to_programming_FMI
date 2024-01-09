@@ -12,11 +12,13 @@ void printBitstring(const bool* bitstring, const size_t n)
 
 void generateAllBitstrings(bool* bitstring, unsigned int pos, const size_t n, bool(*pred)(const bool* bitstring, const size_t n))
 {
-	if (pos == n )
+	if (pos == n)
 	{
-	    if(pred(bitstring, n))
+	    if (pred(bitstring, n))
+	    {
 		    printBitstring(bitstring, n);
-		return;
+	    }
+	    return;
 	}
 
 	bitstring[pos] = 0;
@@ -36,8 +38,8 @@ void printBitstrings(const size_t n, bool(*pred)(const bool* bitstring, const si
 bool hasEqualOnesCountInBothHalves(const bool* bitstring, const size_t n)
 {
     assert(n % 2 == 0);
+	
     int sum = 0;
-    
     for (size_t i = 0; i < n / 2; i++)
     {
         sum += bitstring[i];
