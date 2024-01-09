@@ -37,5 +37,5 @@ unsigned getWhitespacesCount(const char* str)
 int main()
 {
     char str[] = "Hello World";
-    cout << getCapitalCount(str);
+    std::cout << getCapitalsCount(str);
 }
