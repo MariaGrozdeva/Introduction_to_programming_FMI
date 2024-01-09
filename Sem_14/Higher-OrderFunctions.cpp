@@ -18,7 +18,7 @@ int sumInArray(const int* arr, const size_t size)
 
 int productInArray(const int* arr, const size_t size)
 {
-	return applyOnArray(arr, size, 1, [](int x, int y) { return x * y; } );
+	return applyOnArray(arr, size, 1, [](int x, int y) { return x * y; });
 }
 
 int maxElInArray(const int* arr, const size_t size)
