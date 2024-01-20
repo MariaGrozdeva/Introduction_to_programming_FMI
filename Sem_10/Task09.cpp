@@ -11,13 +11,13 @@ bool isDigit(char ch)
 
 short getDigitsCount(unsigned int num)
 {
-    short count = 0;
-    while (num)
-    {
-        count++;
-        num /= 10;
-    }
-    return count;
+	short count = 0;
+    	while (num)
+    	{
+        	count++;
+        	num /= 10;
+    	}
+    	return count;
 }
 
 bool containsNinesOnly(const char*& str)
@@ -60,15 +60,15 @@ unsigned int stringToNumber(const char*& str)
 
 const char* numberToString(unsigned int number)
 {
-    short digitsCount = getDigitsCount(number);
-    char* res = new char[digitsCount + 1];
-    for (int i = digitsCount - 1; i >= 0; i--)
-    {
-        res[i] = number % 10 + '0';
-        number /= 10;
-    }
-    res[digitsCount] = '\0';
-    return res;
+	short digitsCount = getDigitsCount(number);
+    	char* res = new char[digitsCount + 1];
+    	for (int i = digitsCount - 1; i >= 0; i--)
+    	{
+        	res[i] = number % 10 + '0';
+        	number /= 10;
+    	}
+    	res[digitsCount] = '\0';
+    	return res;
 }
 
 const char* incrementEachNumber(const char* str)
