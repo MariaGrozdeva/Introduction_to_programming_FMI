@@ -79,7 +79,7 @@ int myAtoi(const char* str)
 		negative = true;
 	}
 
-	unsigned int result = 0;
+	int result = 0;
 	while (*str != '\0' && isDigit(*str))
 	{
 		unsigned short digit = *str - '0';
