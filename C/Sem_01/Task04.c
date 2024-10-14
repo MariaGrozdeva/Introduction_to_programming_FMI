@@ -11,9 +11,7 @@ int main()
     short secondDigit = n % 10; // get the second digit
     n /= 10; // remove the second digit
 
-    short firstDigit = n % 10; // get the first digit
-
-    int reversed = thirdDigit * 100 + secondDigit * 10 + firstDigit;
+    int reversed = thirdDigit * 100 + secondDigit * 10 + n; // n is already consisting of only one digit
     reversed++;
 
     printf("%d\n", reversed);
