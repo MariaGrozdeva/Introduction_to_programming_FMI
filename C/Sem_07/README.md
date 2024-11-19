@@ -35,7 +35,7 @@
 ## Побитови операции
 **Побитовата операция** се прилага върху един бит или набор от повече отделни битове на двоични числа.
 
-![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/C/Sem_08/images/BitwiseOperators.png)
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/C/Sem_07/images/BitwiseOperators.png)
 
 |        |           |
 |--------|-----------|
