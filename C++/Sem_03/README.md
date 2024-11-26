@@ -145,7 +145,7 @@ for (initialization; condition; step)
 ![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/C++/Sem_03/images/ExampleDrawings_Task08.png)
 
 **Задача 9:** Въвеждат се 5 цели числа – **a, b, c, d, e**. Разглеждаме полинома f(x) = a\*x^4 + b\*x^3 + c\*x^2 + d\*x + e. *Отпечатайте всички цели решения на f(x) >= 0, където x e в интервала [-100, 100]*.  
-*Вход: -1 4 0 8 1, Изход: -1 0 2 3  
+*Вход: -1 4 0 -8 1, Изход: -1 0 2 3  
 Вход: 0 0 -1 5 -6, Изход: 2 3*  
 
 **Задача 10:** Да се напише програма, която приема естествено число n и отпечатва следната гира:  

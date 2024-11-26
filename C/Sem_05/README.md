@@ -126,6 +126,6 @@ int main()
 *Вход: 5 2 1 6 7 4, Изход: 7 1 6 2 5 4*  
 
 **Задача 9:** Напишете функция, която приема цяло k и попълва в масив стойностите от k-тия ред на [триъгълника на Паскал](https://en.wikipedia.org/wiki/Pascal%27s_triangle). Броенето на редовете започва от единица!  
-*Вход: 6, Изход: 1 5 10 10 5 1*  
+*Вход: 5, Изход: 1 5 10 10 5 1*  
 
 ![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/C/Sem_05/images/PascalTriangle.gif)
