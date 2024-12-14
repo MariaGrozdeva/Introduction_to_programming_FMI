@@ -47,6 +47,8 @@
 
 ![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/C/Sem_01/images/DataTypes.png)
 
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/C/Sem_01/images/TypesSizesDifferentModels.png)
+
 ## Преобразуване между типове
 
 Преобразуването може да се извърши:

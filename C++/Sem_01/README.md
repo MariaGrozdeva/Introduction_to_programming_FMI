@@ -22,6 +22,8 @@
 
 ![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/C++/Sem_01/images/DataTypes.png)
 
+![alt_text](https://github.com/MariaGrozdeva/Introduction_to_programming_FMI/blob/main/C++/Sem_01/images/TypesSizesDifferentModels.png)
+
 2. Числа с плаваща запетая (**Floating-point types**)
 ```c++
 float - single precision floating-point type  
