@@ -7,7 +7,12 @@ void removeAt(int** arr, size_t* size, unsigned int index)
     {
         return; // error
     }
-
+    
+     for (size_t i = index; i < *size; i++)
+    {
+        (*arr)[i] = (*arr)[i + 1];
+    }
+    
     --(*size);
     *arr = (int*)realloc(*arr, *size * sizeof(int));
     
@@ -17,10 +22,6 @@ void removeAt(int** arr, size_t* size, unsigned int index)
         return;
     }
 
-    for (size_t i = index; i < *size; i++)
-    {
-        (*arr)[i] = (*arr)[i + 1];
-    }
 }
 
 int main()
