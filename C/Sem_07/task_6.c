@@ -17,11 +17,11 @@ void printSubsets(int arr[], unsigned size)
 {
     int total = 1 << size;
     printf("[], ");
-    for (int mask = 1; mask < total; ++mask)
+    for (int mask = 1; mask < total; mask++)
     {
         int first = 1;
         printf("[");
-        for (int i = 0; i < size; ++i)
+        for (int i = 0; i < size; i++)
         {
             if ((mask >> i) & 1)
             {
