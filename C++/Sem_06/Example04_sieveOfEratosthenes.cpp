@@ -52,8 +52,8 @@ int main()
 	if (n > MAX_SIZE)
 	{
 	    cerr << "n must be <= " << MAX_SIZE << '\n';
-            return 1;
-        }
+        return 1;
+    }
 
 	init(sieve, n, true);
 	sieveEratosthenes(sieve, n);
