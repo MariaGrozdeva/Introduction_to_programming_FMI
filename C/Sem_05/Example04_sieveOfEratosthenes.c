@@ -51,9 +51,9 @@ int main()
 	scanf("%d", &n);
 	if (n > MAX_SIZE)
 	{
-            printf(stderr, "n must be <= %d\n", MAX_SIZE);
-            return 1;
-        }
+        printf(stderr, "n must be <= %d\n", MAX_SIZE);
+        return 1;
+    }
         
 	init(sieve, n, 1);
 	sieveEratosthenes(sieve, n);
