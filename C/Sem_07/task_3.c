@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <limits.h>
 
 unsigned short turnRightMostBitOne(int number)
 {
-    for (int i = 0; i < 32; i++)
+    for (int i = 0; i < sizeof(int) * CHAR_BIT; i++)
     {
         if (number & (1 << i))
         {

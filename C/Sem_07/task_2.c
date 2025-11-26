@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <limits.h>
 
-unsigned short turnRightestBitOne(int number)
+unsigned short countOnes(int number)
 {
     unsigned short counter = 0;
-    for (int i = 0; i < 32; i++)
+    for (int i = 0; i < sizeof(int) * CHAR_BIT; i++)
     {
         if (number & (1 << i))
         {
@@ -18,6 +19,6 @@ int main()
 {
     int number = 0;
     scanf("%d", &number);
-    printf("%hd", turnRightestBitOne(number));
+    printf("%hd", countOnes(number));
     return 0;
 }
