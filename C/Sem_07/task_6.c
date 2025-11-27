@@ -1,19 +1,20 @@
 #include <stdio.h>
+#define CAP 3
 
-void printSubsets(int arr[], unsigned size);
-void readArray(int arr[], unsigned size);
+void printSubsets(const int *arr, const size_t size);
+void readArray(int *arr, const size_t size);
 
 int main()
 {
-    const int size = 3;
-    int arr[3] = {0};
+    int arr[CAP] = {0};
+    const size_t size = sizeof(arr) / sizeof(int);
     readArray(arr, size);
     printSubsets(arr, size);
 
     return 0;
 }
 
-void printSubsets(int arr[], unsigned size)
+void printSubsets(const int *arr, const size_t size)
 {
     int total = 1 << size;
     printf("[], ");
@@ -34,7 +35,7 @@ void printSubsets(int arr[], unsigned size)
         printf("], ");
     }
 }
-void readArray(int arr[], unsigned size)
+void readArray(int *arr, const size_t size)
 {
     for (int i = 0; i < size; i++)
     {
