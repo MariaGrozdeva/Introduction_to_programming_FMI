@@ -3,7 +3,8 @@
 
 unsigned short turnRightMostBitOne(int number)
 {
-    for (int i = 0; i < sizeof(int) * CHAR_BIT; i++)
+    unsigned short size = sizeof(int) * CHAR_BIT;
+    for (int i = 0; i < size; i++)
     {
         if (number & (1 << i))
         {

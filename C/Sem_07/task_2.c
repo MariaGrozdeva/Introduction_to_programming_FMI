@@ -4,7 +4,9 @@
 unsigned short countOnes(int number)
 {
     unsigned short counter = 0;
-    for (int i = 0; i < sizeof(int) * CHAR_BIT; i++)
+    unsigned short size = sizeof(int) * CHAR_BIT;
+
+    for (int i = 0; i < size; i++)
     {
         if (number & (1 << i))
         {
