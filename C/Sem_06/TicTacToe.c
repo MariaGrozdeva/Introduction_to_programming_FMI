@@ -80,11 +80,12 @@ int main()
 		int row, coll;
 		input(field, &row, &coll);
 		
-		field[row][coll] = currentPlayer ? 'x' : 'o';
-		currentPlayer = currentPlayer ? 0 : 1;
+		field[row][coll] = '0' + currentPlayer;
 		
 		print(field);
 		haveWinner = isWinningMove(field, row, coll);
+
+		currentPlayer = (currentPlayer + 1) % PLAYERS;
 	}
 	printf("%s\n", haveWinner ? "Winner!" : "Draw!");
 }

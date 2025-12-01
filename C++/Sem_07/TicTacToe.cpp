@@ -80,7 +80,7 @@ int main()
 		int row, coll;
 		input(field, row, coll);
 		
-		field[row][coll] = currentPlayer ? 'x' : 'o';
+		field[row][coll] = '0' + currentPlayer;
 		
 		print(field);
 		haveWinner = isWinningMove(field, row, coll);
