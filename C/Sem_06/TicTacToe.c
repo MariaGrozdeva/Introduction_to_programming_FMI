@@ -80,8 +80,8 @@ int main()
 		int row, coll;
 		input(field, &row, &coll);
 		
-		field[row][coll] = currentPlayer ? 'x' : 'o';
-		currentPlayer = currentPlayer ? 0 : 1;
+		field[row][coll] = '0' + currentPlayer;
+		currentPlayer = (currentPlayer + 1) % PLAYERS;
 		
 		print(field);
 		haveWinner = isWinningMove(field, row, coll);
