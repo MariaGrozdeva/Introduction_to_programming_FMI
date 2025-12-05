@@ -8,7 +8,7 @@ unsigned short countOnes(int number)
 
     for (int i = 0; i < size; i++)
     {
-        if (number & (1 << i))
+        if (number & (1u << i))
         {
             counter++;
         }
@@ -21,6 +21,6 @@ int main()
 {
     int number = 0;
     scanf("%d", &number);
-    printf("%hd", countOnes(number));
+    printf("%hu", countOnes(number));
     return 0;
 }

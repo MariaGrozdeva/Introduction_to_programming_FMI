@@ -1,21 +1,24 @@
 #include <stdio.h>
+#include <limits.h>
 
-void isNumberContained(int n, int k)
+int isNumberContained(int n, int k)
 {
-    if (k == (n & k))
+    unsigned short size = sizeof(int) * CHAR_BIT;
+
+    for (int i = 0; i < size; i++)
     {
-        puts("true");
+        if (k == ((n >> i) & k))
+        {
+            return 1;
+        }
     }
-    else
-    {
-        puts("false");
-    }
+    return 0;
 }
 
 int main()
 {
     int n = 0, k = 0;
     scanf("%d %d", &n, &k);
-    isNumberContained(n, k);
+    isNumberContained(n, k) ? puts("true") : puts("false");
     return 0;
 }
