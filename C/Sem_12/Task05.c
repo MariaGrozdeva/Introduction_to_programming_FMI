@@ -2,31 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-void initMatrix(char*** matrix, const size_t rowsCount)
-{
-	const size_t MAX_SIZE = 32;
-	char currentWord[MAX_SIZE];
-
-	*matrix = (char**)malloc(rowsCount * sizeof(char*));
-	if (!*matrix)
-	{
-		fprintf(stderr, "Memory allocation failed\n");
-		exit(1);
-	}
-
-	for (size_t i = 0; i < rowsCount; i++)
-	{
-		scanf("%s", currentWord);
-		(*matrix)[i] = (char*)malloc((strlen(currentWord) + 1) * sizeof(char));
-		if (!(*matrix)[i])
-		{
-			fprintf(stderr, "Memory allocation failed\n");
-			exit(1);
-		}
-		strcpy((*matrix)[i], currentWord);
-	}
-}
-
 void freeMatrix(char** matrix, const size_t rowsCount)
 {
 	for (size_t i = 0; i < rowsCount; i++)
@@ -36,6 +11,33 @@ void freeMatrix(char** matrix, const size_t rowsCount)
 	free(matrix);
 }
 
+int initMatrix(char*** matrix, const size_t rowsCount)
+{
+	const size_t MAX_SIZE = 32;
+	char currentWord[MAX_SIZE + 1];
+
+	*matrix = (char**)malloc(rowsCount * sizeof(char*));
+	if (!*matrix)
+	{
+		fprintf(stderr, "Memory allocation failed\n");
+		return -1;
+	}
+
+	for (size_t i = 0; i < rowsCount; i++)
+	{
+		scanf("%s", currentWord);
+		(*matrix)[i] = (char*)malloc((strlen(currentWord) + 1));
+		if (!(*matrix)[i])
+		{
+			fprintf(stderr, "Memory allocation failed\n");
+			freeMatrix(*matrix, i);
+			return -1;
+		}
+		strcpy((*matrix)[i], currentWord);
+	}
+	return 0;
+}
+
 void swapRows(char** lhs, char** rhs)
 {
 	char* temp = *lhs;
@@ -43,7 +45,7 @@ void swapRows(char** lhs, char** rhs)
 	*rhs = temp;
 }
 
-void printPermutationOfWords(char** words, const size_t rowsCount)
+void printPermutationOfWords(const char* const* words, const size_t rowsCount)
 {
 	for (size_t i = 0; i < rowsCount; i++)
 	{
@@ -52,7 +54,7 @@ void printPermutationOfWords(char** words, const size_t rowsCount)
 	printf("\n");
 }
 
-void generateAllPermutationsOfWords(char** words, const size_t rowsCount, const unsigned pos)
+void generateAllPermutationsOfWords(char** words, const size_t rowsCount, const size_t pos)
 {
 	if (pos == rowsCount)
 	{
@@ -79,7 +81,10 @@ int main()
 	scanf("%zu", &n);
 
 	char** words = NULL;
-	initMatrix(&words, n);
+	if (initMatrix(&words, n) == -1) // failure
+	{
+	    return -1;
+	}
 
 	printAllPermutationsOfWords(words, n);
 
